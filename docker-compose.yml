@@ -32,6 +32,7 @@ services:
    php:
       depends_on:
          - redis
+         - mail
       restart: always
       build:
          dockerfile: Dockerfile
@@ -49,4 +50,13 @@ services:
          dockerfile: Dockerfile
          context: ./redis
       container_name: yii2_test_redis
+   mail:
+      build:
+         dockerfile: Dockerfile
+         context: ./mailhog
+      logging:
+         driver: 'none'
+      ports:
+         - 1025:1025 # smtp server
+         - 8025:8025 # web
       
