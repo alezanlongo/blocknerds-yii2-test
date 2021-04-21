@@ -37,7 +37,8 @@ RUN cd /tmp \
     ;./configure \
     ;make \
     ;make install \
-    ;sed -i "s/;//g" /etc/php7/conf.d/xdebug.ini \
+    ;sed -i "s/;zend_extension=xdebug.so/zend_extension=xdebug.so/g" /etc/php7/conf.d/50_xdebug.ini \
+    ;sed -i "s/;xdebug.mode=off/xdebug.mode=on/g" /etc/php7/conf.d/50_xdebug.ini \
     ;docker-php-ext-enable xdebug
     
 #RUN echo "xdebug.remote_enable=on" >> /etc/php7/conf.d/xdebug.ini \
