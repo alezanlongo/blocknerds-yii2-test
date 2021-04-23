@@ -1,0 +1,72 @@
+version: "3.3"
+services:
+  php:
+    container_name: yii2_test_php
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./yii-application:/var/www
+    working_dir: /var/www
+    depends_on:
+      - db
+      - redis
+    networks:
+      - yii2-network
+
+  nginx:
+    container_name: yii2_test_ngnix
+    image: nginx:alpine
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./yii-application:/var/www
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+        - php
+    networks:
+      - yii2-network
+
+  db:
+    container_name: yii2_test_pgsql
+    image: postgres:13-alpine
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data:rw
+      - ./pgsql/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh:ro
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=yii2
+      - POSTGRES_PASSWORD=aa11aa
+      - POSTGRES_USER=docker
+    networks:
+      - yii2-network
+
+  redis:
+    container_name: yii2_test_redis
+    image: redis:6.2-alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - yii2-network
+
+  mail:
+    container_name: yii2_test_mail
+    image: mailhog/mailhog
+    logging:
+        driver: 'none'
+    ports:
+        - 1025:1025 # smtp server
+        - 8025:8025 # web
+    networks:
+      - yii2-network
+
+networks:
+  yii2-network:
+    driver: bridge
