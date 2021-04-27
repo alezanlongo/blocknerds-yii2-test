@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use Yii;
 use app\models\Collection;
 use app\models\CollectionSearch;
+use Exception;
 use igogo5yo\uploadfromurl\UploadFromUrl;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -204,10 +205,20 @@ class CollectionController extends Controller
         }
     }
 
+    protected function getExtension(string $url)
+    {
+        try {
+            return "." . explode("&", explode("&fm=", $url)[1], 2)[0];
+        } catch (Exception $e) {
+            return "";
+        }
+    }
+
     protected function uploadImage($model)
     {
         $url = $model->image;
-        $ext = explode("&", explode("&fm=", $url)[1], 2)[0];
+        // $ext = explode("&", explode("&fm=", $url)[1], 2)[0];
+        $ext = $this->getExtension($url);
         $path = 'uploads/' . $model->user_id;
 
         BaseFileHelper::createDirectory($path);

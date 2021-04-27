@@ -1,8 +1,8 @@
 <?php
 /* @var $this yii\web\View */
 
-use yii\bootstrap\Alert;
-use yii\bootstrap\Html;
+use yii\bootstrap4\Alert;
+use yii\bootstrap4\Html;
 
 $this->title = 'Result';
 $this->params['breadcrumbs'][] = ['label' => 'UnSplash', 'url' => ['index']];

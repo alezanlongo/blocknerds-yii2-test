@@ -2,8 +2,8 @@
 
 /* @var $this yii\web\View */
 
-use yii\bootstrap\Carousel;
-use yii\bootstrap\Html;
+use yii\bootstrap4\Carousel;
+use yii\bootstrap4\Html;
 
 $this->title = 'My Yii Application';
 ?>
