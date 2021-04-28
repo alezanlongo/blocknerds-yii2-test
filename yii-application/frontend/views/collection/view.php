@@ -1,11 +1,11 @@
 <?php
 
-use yii\helpers\BaseStringHelper;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\bootstrap4\Carousel;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Collection */
+/* @var $model common\models\Collection */
 
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Collections', 'url' => ['index']];
@@ -21,36 +21,30 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Are you sure you want to delete this collection and images?',
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Download collection', ['download', 'id' => $model->id], ['class' => 'btn btn-info']) ?>
     </p>
 
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+            // 'id',
             // 'user_id',
-            [
-                'attribute' =>   'image',
-                'format' => 'raw',
-                'value' => function ($model) {
-                    return Html::a(BaseStringHelper::truncate($model->image, 99, '...'), $model->image, ['target' => 'blank']);
-                },
-            ],
-            [
-                'attribute' =>   'image',
-                'format' => 'raw',
-                'label' => 'Image',
-                'value' => function ($model) {
-                    return Html::img($model->image, ['class' => 'img-responsive']);
-                },
-            ],
             'title',
-            'created_at:datetime',
-            'updated_at:datetime',
+            // 'created_by',
+            // 'updated_by',
+            // 'created_at',
+            // 'updated_at',
         ],
     ]) ?>
+
+    <h2>Images</h2>
+
+    <?= Carousel::widget([
+        'items' => $images
+    ]); ?>
 
 </div>

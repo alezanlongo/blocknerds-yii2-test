@@ -1,19 +1,22 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use common\models\User;
+use common\models\Image;
 use Yii;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;
+use yii\helpers\BaseFileHelper;
 
 /**
  * This is the model class for table "collection".
  *
  * @property int $id
  * @property int $user_id
- * @property string $image
  * @property string|null $title
+ * @property int $created_by
+ * @property int $updated_by
  * @property int $created_at
  * @property int $updated_at
  */
@@ -31,11 +34,7 @@ class Collection extends \yii\db\ActiveRecord
     {
         return [
             TimestampBehavior::class,
-            [
-                'class' => BlameableBehavior::class,
-                'createdByAttribute' => 'user_id',
-                'updatedByAttribute' => false,
-            ],
+            BlameableBehavior::class
         ];
     }
 
@@ -45,10 +44,9 @@ class Collection extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            // [['user_id', 'user_id', 'image', 'created_at', 'updated_at'], 'required'],
-            [['title', 'image'], 'required'],
-            [['user_id', 'created_at', 'updated_at'], 'integer'],
-            [['image', 'title'], 'string', 'max' => 255],
+            [['title'], 'required'],
+            [['user_id'], 'integer'],
+            [['title'], 'string', 'max' => 255],
         ];
     }
 
@@ -58,17 +56,30 @@ class Collection extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'Image ID',
-            // 'user_id' => 'User ID',
-            'image' => 'Image URL',
+            'id' => 'ID',
             'title' => 'Title',
-            // 'created_at' => 'Created At',
-            // 'updated_at' => 'Updated At',
         ];
     }
 
     public function getUser()
     {
         return $this->hasOne(User::class, ['id' => 'user_id']);
+    }
+
+    public function getImages()
+    {
+        return $this->hasMany(Image::class, ['collection_id' => 'id']);
+    }
+
+    public function afterSave($insert = true, $changedAttributes = null)
+    {
+        $path = 'uploads/' . $this->user_id . '/' . $this->id;
+        BaseFileHelper::createDirectory($path, 0775, true);
+    }
+
+    public function afterDelete()
+    {
+        $path = 'uploads/' . $this->user_id . '/' . $this->id;
+        BaseFileHelper::removeDirectory($path);
     }
 }

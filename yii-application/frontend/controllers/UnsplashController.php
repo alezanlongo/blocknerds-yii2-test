@@ -2,8 +2,12 @@
 
 namespace frontend\controllers;
 
+use common\models\Collection;
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\httpclient\Client;
+use yii\helpers\VarDumper;
+use yii\web\View;
 
 class UnsplashController extends \yii\web\Controller
 {
@@ -22,6 +26,24 @@ class UnsplashController extends \yii\web\Controller
 
         $response = $client->get('search/photos', ['client_id' => $key, 'query' => $term])->send();
 
-        return $this->render('index', ['term' => $term, 'unsplash' => $response->getData()]);
+        $collections = Yii::$app->user->identity->getCollections()->asArray()->all();
+
+        $collections = ArrayHelper::map($collections, 'id', 'title');
+
+        Yii::$app->view->registerJsVar('csrf', Yii::$app->request->getCsrfToken(), view::POS_END);
+        Yii::$app->view->registerJsFile(
+            '/js/unsplash.js',
+            [
+                'depends' => "yii\web\JqueryAsset",
+                'position' => View::POS_END
+            ]
+        );
+
+        return $this->render('index', [
+            'term' => $term,
+            'unsplash' => $response->getData(),
+            'collection' => new Collection(),
+            'collections' => $collections
+        ]);
     }
 }

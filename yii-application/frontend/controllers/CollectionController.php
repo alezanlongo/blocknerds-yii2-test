@@ -3,16 +3,14 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\Collection;
-use app\models\CollectionSearch;
-use Exception;
-use igogo5yo\uploadfromurl\UploadFromUrl;
+use common\models\Collection;
+use common\models\CollectionSearch;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\helpers\BaseFileHelper;
+use yii\helpers\ArrayHelper;
 use yii\helpers\VarDumper;
 use ZipArchive;
 
@@ -59,8 +57,17 @@ class CollectionController extends Controller
      */
     public function actionView($id)
     {
+        $collection = Collection::findOne($id);
+
+        $images = $collection->getImages()->asArray()->all();
+
+        $images = ArrayHelper::getColumn($images, function ($element) {
+            return '<img src="' . $element['url'] . '"/>';
+        });
+
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $collection,
+            'images' => $images
         ]);
     }
 
@@ -72,31 +79,16 @@ class CollectionController extends Controller
     public function actionCreate()
     {
         $model = new Collection();
+        $fields = Yii::$app->request->post();
+        $fields['Collection']['user_id'] = Yii::$app->user->identity->getId();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $this->uploadImage($model);
+        if ($model->load($fields) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
         ]);
-    }
-
-    public function actionAjax()
-    {
-        if (Yii::$app->request->isAjax) {
-            $model = new Collection();
-
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                $this->uploadImage($model);
-                $response = Yii::$app->response;
-                $response->format = \yii\web\Response::FORMAT_JSON;
-                $response->data = ['image' => $model];
-            } else {
-                throw new \yii\web\BadRequestHttpException();
-            }
-        }
     }
 
     /**
@@ -111,7 +103,6 @@ class CollectionController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $this->uploadImage($model);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -129,10 +120,8 @@ class CollectionController extends Controller
      */
     public function actionDelete($id)
     {
-        // $model = $this->findModel($id)->delete();
-        $model = $this->findModel($id);
-        $this->deleteFileImage($model);
-        $model->delete();
+        $this->findModel($id)->delete();
+
         return $this->redirect(['index']);
     }
 
@@ -159,14 +148,15 @@ class CollectionController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDownload()
+    public function actionDownload($id)
     {
         $user_id = \Yii::$app->user->identity->id;
-        $path = Yii::$app->basePath . '/web/uploads/' . $user_id;
+        $path = Yii::$app->basePath . '/web/uploads/' . $user_id . '/' . $id;
 
         $zip = new ZipArchive();
 
-        $destination = $path . "/collection.zip";
+        $filename = "collection_" . $id . ".zip";
+        $destination = $path . "/" .$filename;
 
         if ($zip->open($destination, ZipArchive::CREATE | ZipArchive::OVERWRITE) !== true) {
             throw new \yii\web\HttpException(500, 'Something went wrong creating zip, please try again later.');
@@ -193,7 +183,7 @@ class CollectionController extends Controller
 
         header("Pragma: public");
         header("Content-Type: application/application/force-download");
-        header("Content-Disposition: inline; filename=collection.zip");
+        header("Content-Disposition: inline; filename=".$filename);
         header('Content-Length: ' . filesize($destination));
         header("Accept Ranges: bytes");
         header("Expires: 0");
@@ -203,40 +193,5 @@ class CollectionController extends Controller
         if (file_exists($destination)) {
             unlink($destination);
         }
-    }
-
-    protected function getExtension(string $url)
-    {
-        try {
-            return "." . explode("&", explode("&fm=", $url)[1], 2)[0];
-        } catch (Exception $e) {
-            return "";
-        }
-    }
-
-    protected function uploadImage($model)
-    {
-        $url = $model->image;
-        // $ext = explode("&", explode("&fm=", $url)[1], 2)[0];
-        $ext = $this->getExtension($url);
-        $path = 'uploads/' . $model->user_id;
-
-        BaseFileHelper::createDirectory($path);
-
-        $file = UploadFromUrl::initWithUrl($url);
-
-        $file->saveAs($path . '/file_id_' . $model->id . '.' . $ext);
-    }
-
-    protected function deleteFileImage($model)
-    {
-        $ext = explode("&", explode("&fm=", $model->image)[1], 2)[0];
-        $path = Yii::$app->basePath . '/web/uploads/' . $model->user_id . '/file_id_' . $model->id . '.' . $ext;
-
-        if (file_exists($path)) {
-            unlink($path);
-        }
-
-        return true;
     }
 }

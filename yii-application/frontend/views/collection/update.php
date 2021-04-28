@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Collection */
+/* @var $model common\models\Collection */
 
 $this->title = 'Update Collection: ' . $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Collections', 'url' => ['index']];

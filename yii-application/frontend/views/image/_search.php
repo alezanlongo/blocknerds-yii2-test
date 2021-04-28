@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\CollectionSearch */
+/* @var $model app\models\ImageSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="collection-search">
+<div class="image-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -17,13 +17,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'user_id') ?>
+    <?= $form->field($model, 'collection_id') ?>
 
-    <?= $form->field($model, 'title') ?>
+    <?= $form->field($model, 'author') ?>
 
-    <?= $form->field($model, 'created_by') ?>
+    <?= $form->field($model, 'description') ?>
 
-    <?= $form->field($model, 'updated_by') ?>
+    <?= $form->field($model, 'url') ?>
 
     <?php // echo $form->field($model, 'created_at') ?>
 

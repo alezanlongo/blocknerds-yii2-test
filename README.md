@@ -1,4 +1,5 @@
-# Create a Rest API
+# Bootstrapping Exercise 2 - Yii 2.0 Advanced Application Template
+https://github.com/alezanlongo/blocknerds-yii2-test/tree/nahuel-blocknerds
 
 ## Installing using Composer
 sudo docker run --rm -v $(pwd):/app composer create-project --prefer-dist yiisoft/yii2-app-advanced yii-application

@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use app\models\EntryForm;
+use common\models\Image;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -82,13 +83,14 @@ class SiteController extends Controller
         $collection = [];
 
         if (!Yii::$app->user->isGuest) {
-            $collection = Yii::$app->user->identity->getCollection()->asArray()->all();;
+            $collectionsIds = Yii::$app->user->identity->getCollections()->select('id')->column();
+            $images = Image::findAll(['collection_id' => $collectionsIds]);
         } else {
             return Yii::$app->getResponse()->redirect('site/login'); 
         }
 
-        $images = ArrayHelper::getColumn($collection, function ($element) {
-            return '<img src="' . $element['image'] . '"/>';
+        $images = ArrayHelper::getColumn($images, function ($element) {
+            return '<img src="' . $element['url'] . '"/>';
         });
 
         return $this->render('index', [

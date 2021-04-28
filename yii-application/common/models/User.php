@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-use app\models\Collection;
+use common\models\Collection;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
@@ -155,7 +155,7 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->auth_key;
     }
 
-    public function getCollection()
+    public function getCollections()
     {
         return $this->hasMany(Collection::class, ['user_id' => 'id']);
     }

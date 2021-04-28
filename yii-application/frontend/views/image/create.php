@@ -3,13 +3,13 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Collection */
+/* @var $model app\models\Image */
 
-$this->title = 'Create Collection';
-$this->params['breadcrumbs'][] = ['label' => 'Collections', 'url' => ['index']];
+$this->title = 'Create Image';
+$this->params['breadcrumbs'][] = ['label' => 'Images', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="collection-create">
+<div class="image-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

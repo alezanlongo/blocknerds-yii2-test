@@ -3,9 +3,9 @@
 use yii\db\Migration;
 
 /**
- * Class m210421_183822_collection
+ * Class m210427_155257_add_image_table
  */
-class m210421_183822_collection extends Migration
+class m210427_155257_add_image_table extends Migration
 {
     /**
      * {@inheritdoc}
@@ -14,10 +14,12 @@ class m210421_183822_collection extends Migration
     {
         $tableOptions = null;
 
-        $this->createTable('collection', [
+        $this->createTable('image', [
             'id' => $this->primaryKey(),
-            'user_id' => $this->integer()->notNull(),
-            'title' => $this->string(),
+            'collection_id' => $this->integer()->notNull(),
+            'author' => $this->string(),
+            'description' => $this->string(),
+            'url' => $this->string(255)->notNull(),
             'created_by' => $this->integer()->notNull(),
             'updated_by' => $this->integer()->notNull(),
             'created_at' => $this->integer()->notNull(),
@@ -30,6 +32,6 @@ class m210421_183822_collection extends Migration
      */
     public function down()
     {
-        $this->dropTable('collection');
+        $this->dropTable('image');
     }
 }

@@ -1,13 +1,13 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Collection;
+use common\models\Collection;
 
 /**
- * CollectionSearch represents the model behind the search form of `app\models\Collection`.
+ * CollectionSearch represents the model behind the search form of `common\models\Collection`.
  */
 class CollectionSearch extends Collection
 {
@@ -17,8 +17,8 @@ class CollectionSearch extends Collection
     public function rules()
     {
         return [
-            [['id', 'user_id', 'created_at', 'updated_at'], 'integer'],
-            [['image', 'title'], 'safe'],
+            [['id', 'user_id', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
+            [['title'], 'safe'],
         ];
     }
 
@@ -60,12 +60,13 @@ class CollectionSearch extends Collection
         $query->andFilterWhere([
             'id' => $this->id,
             'user_id' => $this->user_id,
+            'created_by' => $this->created_by,
+            'updated_by' => $this->updated_by,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['ilike', 'image', $this->image])
-            ->andFilterWhere(['ilike', 'title', $this->title]);
+        $query->andFilterWhere(['ilike', 'title', $this->title]);
 
         return $dataProvider;
     }
