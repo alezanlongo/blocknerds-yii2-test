@@ -12,17 +12,27 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'collection_id')->textInput() ?>
+    <?php
+    if ($model->isNewRecord) {
+        echo $form->field($model, 'collection_id')->textInput();
+    }
+    ?>
 
     <?= $form->field($model, 'author')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'url')->textInput(['maxlength' => true, 'readonly' => true]) ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
+    <div class="form-check">
+        <label for="created_at">Created at:</label>
+        <?= Yii::$app->formatter->asDate($model->created_at, 'long'); ?>
+    </div>
 
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+    <div class="form-check">
+        <label for="created_at">Updated at:</label>
+        <?= Yii::$app->formatter->asDate($model->updated_at, 'long'); ?>
+    </div>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
