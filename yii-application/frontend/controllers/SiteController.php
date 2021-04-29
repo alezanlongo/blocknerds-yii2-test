@@ -89,9 +89,9 @@ class SiteController extends Controller
             return Yii::$app->getResponse()->redirect('site/login'); 
         }
 
-        $images = ArrayHelper::getColumn($images, function ($element) {
-            return '<img src="' . $element['url'] . '"/>';
-        });
+        // $images = ArrayHelper::getColumn($images, function ($element) {
+        //     return '<img src="' . $element['url'] . '"/>';
+        // });
 
         return $this->render('index', [
             'collection' => $images

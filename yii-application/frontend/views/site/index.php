@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 
+use common\widgets\slider\SliderWidget;
 use yii\bootstrap4\Carousel;
 use yii\bootstrap4\Html;
 
@@ -14,7 +15,8 @@ $this->title = 'My Yii Application';
     </div>
 
     <div class="body-content">
-        <?= Carousel::widget([
+        <?=
+        SliderWidget::widget([
             'items' => $collection
         ]); ?>
     </div>
