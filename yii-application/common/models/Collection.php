@@ -73,13 +73,15 @@ class Collection extends \yii\db\ActiveRecord
 
     public function afterSave($insert = true, $changedAttributes = null)
     {
-        $path = 'uploads/' . $this->user_id . '/' . $this->id;
+
+        $path = Yii::getAlias('@frontend') . '/web/uploads/' . $this->user_id . '/' . $this->id;
         BaseFileHelper::createDirectory($path, 0775, true);
     }
 
     public function afterDelete()
     {
-        $path = 'uploads/' . $this->user_id . '/' . $this->id;
+        Image::deleteAll(['collection_id' => $this->id]);
+        $path = Yii::getAlias('@frontend') . '/web/uploads/' . $this->user_id . '/' . $this->id;
         BaseFileHelper::removeDirectory($path);
     }
 }

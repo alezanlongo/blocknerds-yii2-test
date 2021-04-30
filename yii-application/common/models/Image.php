@@ -85,7 +85,8 @@ class Image extends \yii\db\ActiveRecord
     protected function deleteFileImage()
     {
         $ext = explode("&", explode("&fm=", $this->url)[1], 2)[0];
-        $path = Yii::$app->basePath . '/web/uploads/' . $this->collection->user_id . '/' . $this->collection->id . '/file_id_' . $this->id . '.' . $ext;
+
+        $path = Yii::getAlias('@frontend') . '/web/uploads/' . $this->collection->user_id . '/' . $this->collection->id . '/file_id_' . $this->id . '.' . $ext;
 
         if (file_exists($path)) {
             unlink($path);

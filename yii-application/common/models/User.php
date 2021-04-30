@@ -7,6 +7,7 @@ use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\helpers\BaseFileHelper;
 use yii\web\IdentityInterface;
 
 /**
@@ -228,5 +229,17 @@ class User extends ActiveRecord implements IdentityInterface
         } else {
             return false;
         }
+    }
+
+    public function afterDelete()
+    {
+        $collections = $this->getCollections()->all();
+
+        foreach ($collections as $collection) {
+            $collection->delete();
+        }
+
+        $path = Yii::getAlias('@frontend') . '/web/uploads/' . $this->id;
+        BaseFileHelper::removeDirectory($path);
     }
 }
