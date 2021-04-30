@@ -41,6 +41,7 @@ class CollectionController extends Controller
     public function actionIndex()
     {
         $searchModel = new CollectionSearch();
+        $searchModel->user_id = Yii::$app->user->id;
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
