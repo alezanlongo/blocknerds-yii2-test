@@ -41,8 +41,11 @@ class CollectionController extends Controller
     public function actionIndex()
     {
         $searchModel = new CollectionSearch();
-        $searchModel->user_id = Yii::$app->user->id;
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        $dataProvider = Yii::$app->cache->getOrSet('collectionIndex', function () use ($searchModel) {
+            $searchModel->user_id = Yii::$app->user->id;
+            return $searchModel->search(Yii::$app->request->queryParams);
+        }, 60);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -157,7 +160,7 @@ class CollectionController extends Controller
         $zip = new ZipArchive();
 
         $filename = "collection_" . $id . ".zip";
-        $destination = $path . "/" .$filename;
+        $destination = $path . "/" . $filename;
 
         if ($zip->open($destination, ZipArchive::CREATE | ZipArchive::OVERWRITE) !== true) {
             throw new \yii\web\HttpException(500, 'Something went wrong creating zip, please try again later.');
@@ -184,7 +187,7 @@ class CollectionController extends Controller
 
         header("Pragma: public");
         header("Content-Type: application/application/force-download");
-        header("Content-Disposition: inline; filename=".$filename);
+        header("Content-Disposition: inline; filename=" . $filename);
         header('Content-Length: ' . filesize($destination));
         header("Accept Ranges: bytes");
         header("Expires: 0");

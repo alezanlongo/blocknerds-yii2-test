@@ -80,13 +80,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $collection = [];
-
         if (!Yii::$app->user->isGuest) {
-            $collectionsIds = Yii::$app->user->identity->getCollections()->select('id')->column();
-            $images = Image::findAll(['collection_id' => $collectionsIds]);
+            $images = Yii::$app->cache->getOrSet('siteIndex', function () {
+                $collectionsIds = Yii::$app->user->identity->getCollections()->select('id')->column();
+                return Image::findAll(['collection_id' => $collectionsIds]);
+            }, 60);
         } else {
-            return Yii::$app->getResponse()->redirect('site/login'); 
+            return Yii::$app->getResponse()->redirect('site/login');
         }
 
         // $images = ArrayHelper::getColumn($images, function ($element) {
