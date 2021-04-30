@@ -163,7 +163,7 @@ class ImageController extends Controller
         $url = $model->url;
         $ext = $this->getExtension($url);
 
-        $path = 'uploads/' . $model->collection->user_id . '/' . $model->collection->id;
+        $path = Yii::getAlias('@frontend') . '/web/uploads/' . $model->collection->user_id . '/' . $model->collection->id;
 
         $file = UploadFromUrl::initWithUrl($url);
 
