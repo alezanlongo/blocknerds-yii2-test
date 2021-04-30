@@ -5,8 +5,6 @@ namespace frontend\controllers;
 use common\models\Collection;
 use Yii;
 use yii\helpers\ArrayHelper;
-use yii\httpclient\Client;
-use yii\helpers\VarDumper;
 use yii\web\View;
 
 class UnsplashController extends \yii\web\Controller
@@ -16,15 +14,29 @@ class UnsplashController extends \yii\web\Controller
         return $this->render('search');
     }
 
+    public function beforeAction($action)
+    {
+        if ($action->actionMethod === 'actionShow') {
+            $dt = new \DateTime();
+            Yii::info("action method '{$action->actionMethod}' start: {$dt->format('Y-m-d H:i:s')}");
+        }
+        return parent::beforeAction($action);
+    }
+
+    public function afterAction($action, $result)
+    {
+        if ($action->actionMethod === 'actionShow') {
+            $dt = new \DateTime();
+            Yii::info("action method '{$action->actionMethod}' finish: {$dt->format('Y-m-d H:i:s')}");
+        }
+        return parent::afterAction($action, $result);
+    }
+
     public function actionShow()
     {
         $term = Yii::$app->request->post('term');
 
-        $key = 'HxQzenO99ZGmXEIQ0Tgk4JHV5P3bRhH84LMnbkglDPA';
-
-        $client = new Client(['baseUrl' => 'https://api.unsplash.com/']);
-
-        $response = $client->get('search/photos', ['client_id' => $key, 'query' => $term])->send();
+        $unsplash = Yii::$app->unsplash->get($term);
 
         $collections = Yii::$app->user->identity->getCollections()->asArray()->all();
 
@@ -41,7 +53,7 @@ class UnsplashController extends \yii\web\Controller
 
         return $this->render('index', [
             'term' => $term,
-            'unsplash' => $response->getData(),
+            'unsplash' => $unsplash,
             'collection' => new Collection(),
             'collections' => $collections
         ]);

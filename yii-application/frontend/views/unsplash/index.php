@@ -13,21 +13,24 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="row">
     <?php
-    foreach ($unsplash['results'] as $item) {
+
+    if (isset($unsplash['results'])) {
+        foreach ($unsplash['results'] as $item) {
     ?>
-        <div class="col-md-3">
-            <div class="card">
-                <img src="<?= $item['urls']["thumb"] ?>" class="card-mg-top" width="100%" />
-                <div class="card-body">
-                    <h5 class="card-title"><?= $item['description'] ?></h5>
-                    <?= Html::hiddenInput('author_' . $item['id'], substr($item['user']['name'], 0, 255)); ?>
-                    <?= Html::hiddenInput('title_' . $item['id'], trim($item['description']) == "" ? "Unknown" : substr($item['description'], 0, 255)); ?>
-                    <?= Html::hiddenInput('url_' . $item['id'], substr($item['urls']['small'], 0, 255)); ?>
-                    <a href="#" class="card-link add_to_collection" data-toggle='modal' data-target='#modal_collection' data-unsplash-id='<?= $item['id']; ?>'>Add to collection</a>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="<?= $item['urls']["thumb"] ?>" class="card-mg-top" width="100%" />
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $item['description'] ?></h5>
+                        <?= Html::hiddenInput('author_' . $item['id'], substr($item['user']['name'], 0, 255)); ?>
+                        <?= Html::hiddenInput('title_' . $item['id'], trim($item['description']) == "" ? "Unknown" : substr($item['description'], 0, 255)); ?>
+                        <?= Html::hiddenInput('url_' . $item['id'], substr($item['urls']['small'], 0, 255)); ?>
+                        <a href="#" class="card-link add_to_collection" data-toggle='modal' data-target='#modal_collection' data-unsplash-id='<?= $item['id']; ?>'>Add to collection</a>
+                    </div>
                 </div>
             </div>
-        </div>
     <?php
+        }
     }
     ?>
 </div>
