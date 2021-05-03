@@ -11,26 +11,32 @@ services:
       environment:
          TZ: America/Argentina/Buenos_Aires
       ports:
-         - '8081:80'
+         - '80:80'
       volumes:
-         - ./files:/var/www/html/
-      container_name: yii2_test_ngnix
+         - ./yii-application:/var/www/html/
+      container_name: yii2_ngnix
+      networks:
+         - yii-network
+
    pgsql:
       build:
          dockerfile: Dockerfile
          context: ./pgsql
       restart: always
       environment:
-         POSTGRES_USER: "root"
-         POSTGRES_PASSWORD: "root"
-         POSTGRES_DB: "test"
+         POSTGRES_USER: "dev"
+         POSTGRES_PASSWORD: "d3v"
+         POSTGRES_DB: "unsplash"
       ports:
          - '5432:5432'
       volumes:
          - "./var/lib/pgdata:/var/lib/postgresql/data"
-      container_name: yii2_test_pgsql
+      container_name: yii2_pgsql
+      networks:
+         - yii-network
    php:
       depends_on:
+         - pgsql
          - redis
          - mail
       restart: always
@@ -43,14 +49,23 @@ services:
       ports:
          - '9002:9000'      
       volumes:
-         - "./files:/var/www/html/"
-      container_name: yii2_test_php
+         - "./yii-application:/var/www/html/"
+      container_name: yii2_php
+      networks:
+         - yii-network
+
    redis:
       build:
          dockerfile: Dockerfile
          context: ./redis
-      container_name: yii2_test_redis
+      container_name: yii2_redis
+      ports:
+         - '6379:6379'
+      networks:
+         - yii-network
+
    mail:
+      container_name: yii2_mail
       build:
          dockerfile: Dockerfile
          context: ./mailhog
@@ -59,4 +74,9 @@ services:
       ports:
          - 1025:1025 # smtp server
          - 8025:8025 # web
+      networks:
+         - yii-network
       
+networks:
+   yii-network:
+      driver: bridge
