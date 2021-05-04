@@ -16,7 +16,7 @@ class m210427_132944_add_admin_user extends Migration
         $user = \Yii::createObject([
             'class'    => User::class,
             'username' => 'admin',
-            'auth_key' => '12345678',
+            'auth_key' =>  Yii::$app->getSecurity()->generateRandomString(),
             'password' => '12345678',
             'email'    => 'admin@@example.com',
             'status' => 10,
