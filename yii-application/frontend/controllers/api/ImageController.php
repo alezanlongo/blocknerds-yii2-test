@@ -3,16 +3,16 @@
 namespace frontend\controllers\api;
 
 use common\models\Collection;
-use common\models\CollectionSearch;
+use common\models\Image;
 use Yii;
 use yii\filters\auth\CompositeAuth;
 use yii\rest\ActiveController;
 use yii\filters\auth\HttpBearerAuth;
 use yii\helpers\ArrayHelper;
 
-class CollectionController extends ActiveController
+class ImageController extends ActiveController
 {
-    public $modelClass = Collection::class;
+    public $modelClass = Image::class;
 
     public function init()
     {
@@ -39,10 +39,9 @@ class CollectionController extends ActiveController
         $actions['index']['prepareDataProvider'] = [$this, 'actionIndex'];
 
         unset(
-            $actions['create'],
-            $actions['update'],
             $actions['delete'],
             $actions['view'],
+            $actions['update'],
         );
 
         return $actions;
@@ -50,59 +49,73 @@ class CollectionController extends ActiveController
 
     public function actionIndex()
     {
-        $searchModel = new CollectionSearch();
-        $searchModel->user_id = Yii::$app->user->id;
-        return $searchModel->search(Yii::$app->request->queryParams);
+        $collectionsIds = Collection::find()->where(['user_id' => Yii::$app->user->id])->select('id')->column();
+
+        if (!$collectionsIds) {
+            throw new \yii\web\NotFoundHttpException();
+        }
+
+        $images = Image::findAll(['collection_id' => $collectionsIds]);
+
+        if (count($images) < 1) {
+            throw new \yii\web\NotFoundHttpException();
+        }
+
+        return $images;
     }
 
     public function actionView($id)
     {
-        $collection = Collection::findOne($id);
+        $image = Image::findOne($id);
+
+        if (!$image) {
+            throw new \yii\web\NotFoundHttpException();
+        }
+
+        $collection = $image->getCollection()->one();
 
         if ($collection->user_id !== Yii::$app->user->id) {
             throw new \yii\web\ForbiddenHttpException('You are unauthorized to access the requested resource.');
         }
 
-        return $collection;
+        return $image;
     }
 
     public function actionDelete($id)
     {
-        $collection = Collection::findOne($id);
+        $image = Image::findOne($id);
+
+        if (!$image) {
+            throw new \yii\web\NotFoundHttpException();
+        }
+
+        $collection = $image->getCollection()->one();
 
         if ($collection->user_id !== Yii::$app->user->id) {
             throw new \yii\web\ForbiddenHttpException('You are unauthorized to access the requested resource.');
         }
 
-        $collection->delete();
+        $image->delete();
 
-        return $collection;
+        return $image;
     }
 
     public function actionUpdate($id)
     {
-        $collection = Collection::findOne($id);
+        $image = Image::findOne($id);
+
+        if (!$image) {
+            throw new \yii\web\NotFoundHttpException();
+        }
+
+        $collection = $image->getCollection()->one();
 
         if ($collection->user_id !== Yii::$app->user->id) {
             throw new \yii\web\ForbiddenHttpException('You are unauthorized to access the requested resource.');
         }
-        if ($collection->load(Yii::$app->request->post()) && $collection->save()) {
-            return $collection;
-        } else {
-            throw new \yii\web\ServerErrorHttpException();
-        }
-
-        return $collection;
-    }
-
-    public function actionCreate()
-    {
-        $model = new Collection();
-        $fields = Yii::$app->request->post();
-        $fields['Collection']['user_id'] = Yii::$app->user->identity->getId();
-
-        if ($model->load($fields) && $model->save()) {
-            return $model;
+        
+        if ($image->load(Yii::$app->request->post()) && $image->save()) {
+            return $image;
         } else {
             throw new \yii\web\ServerErrorHttpException();
         }

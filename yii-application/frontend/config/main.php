@@ -41,11 +41,22 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                // '/login' => "/site/login"
-                // '<module:gii>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'collection'],
+                'POST api/auth/login' => 'api/auth/login',
+
+                'GET,HEAD api/collection' => 'api/collection/index',
+                'GET,HEAD api/collection/<id>' => 'api/collection/view',
+                'PUT,PATCH api/collection/<id>' => 'api/collection/update',
+                'POST api/collection' => 'api/collection/create',
+                'DELETE api/collection/<id>' => 'api/collection/delete',
+
+                'GET,HEAD api/image' => 'api/image/index',
+                'GET,HEAD api/image/<id>' => 'api/image/view',
+                'PUT,PATCH api/image/<id>' => 'api/image/update',
+                'POST api/image' => 'api/image/create',
+                'DELETE api/image/<id>' => 'api/image/delete',
             ],
         ],
     ],
