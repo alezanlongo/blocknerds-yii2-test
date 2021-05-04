@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "photo".
@@ -26,6 +27,15 @@ class Photo extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'photo';
+    }
+
+     /**
+     * {@inheritdoc}
+     */
+    public function behaviors() {
+        return [
+            TimestampBehavior::class,
+        ];
     }
 
     /**

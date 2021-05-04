@@ -1,4 +1,8 @@
 <?php
+
+use yii\rest\UrlRule;
+use yii\web\JsonParser;
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -14,6 +18,9 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'parsers' => [
+                'application/json' => JsonParser::class,
+            ]
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -36,13 +43,25 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-    
         'urlManager' => [
             'enablePrettyUrl' => true,
+            'enableStrictParsing' => false,
             'showScriptName' => false,
             'rules' => [
-                // '/login' => "/site/login"
-                // '<module:gii>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+                'POST auth/login' => 'api/auth/login',
+                // 'GET,HEAD api/collection' => 'api/collection/index',
+                // 'GET,HEAD api/collection/<id>' => 'api/collection/view',
+                // 'PUT,PATCH api/collection/<id>' => 'api/collection/update',
+                // 'POST api/collection' => 'api/collection/create',
+                // 'DELETE api/collection/<id>' => 'api/collection/delete'
+                [
+                    'class' => UrlRule::class,
+                    'controller' => 'api/collection',
+                ],
+                [
+                    'class' => UrlRule::class,
+                    'controller' => 'api/photo',
+                ],
             ],
         ],
     ],
