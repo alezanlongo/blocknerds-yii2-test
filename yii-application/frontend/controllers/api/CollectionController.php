@@ -33,6 +33,9 @@ class CollectionController extends ActiveController
                 HttpBearerAuth::class,
             ],
         ];
+        // $behaviors['authenticator'] = [
+        //     'class' => HttpBearerAuth::class,
+        // ];
         return $behaviors;
     }
 

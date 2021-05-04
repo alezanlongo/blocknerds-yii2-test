@@ -16,7 +16,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "Oj-unYXzytz6bspLBRpo9ev2cXAg90uT",
+									"value": "{{access_token}}",
 									"type": "string"
 								}
 							]
@@ -47,7 +47,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "Oj-unYXzytz6bspLBRpo9ev2cXAg90uT",
+									"value": "{{access_token}}",
 									"type": "string"
 								}
 							]
@@ -87,7 +87,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "Oj-unYXzytz6bspLBRpo9ev2cXAg90uT",
+									"value": "{{access_token}}",
 									"type": "string"
 								}
 							]
@@ -96,7 +96,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"Dogs\"\n}",
+							"raw": "{\n    \"title\": \"Doasdasdgs\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -126,7 +126,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "Oj-unYXzytz6bspLBRpo9ev2cXAg90uT",
+									"value": "{{access_token}}",
 									"type": "string"
 								}
 							]
@@ -157,7 +157,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "Oj-unYXzytz6bspLBRpo9ev2cXAg90uT",
+									"value": "{{access_token}}",
 									"type": "string"
 								}
 							]
@@ -192,7 +192,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "Oj-unYXzytz6bspLBRpo9ev2cXAg90uT",
+									"value": "{{access_token}}",
 									"type": "string"
 								}
 							]
@@ -222,7 +222,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "Oj-unYXzytz6bspLBRpo9ev2cXAg90uT",
+									"value": "{{access_token}}",
 									"type": "string"
 								}
 							]
@@ -230,7 +230,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://frontend.test/api/photos/1",
+							"raw": "http://frontend.test/api/photos/8",
 							"protocol": "http",
 							"host": [
 								"frontend",
@@ -239,7 +239,7 @@
 							"path": [
 								"api",
 								"photos",
-								"1"
+								"8"
 							]
 						}
 					},
@@ -253,7 +253,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "Oj-unYXzytz6bspLBRpo9ev2cXAg90uT",
+									"value": "{{access_token}}",
 									"type": "string"
 								}
 							]
@@ -270,7 +270,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://frontend.test/api/photos/1",
+							"raw": "http://frontend.test/api/photos/8",
 							"protocol": "http",
 							"host": [
 								"frontend",
@@ -279,7 +279,7 @@
 							"path": [
 								"api",
 								"photos",
-								"1"
+								"8"
 							]
 						}
 					},
@@ -293,7 +293,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "Oj-unYXzytz6bspLBRpo9ev2cXAg90uT",
+									"value": "{{access_token}}",
 									"type": "string"
 								}
 							]
@@ -301,7 +301,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://frontend.test/api/photos/1",
+							"raw": "http://frontend.test/api/photos/8",
 							"protocol": "http",
 							"host": [
 								"frontend",
@@ -310,7 +310,7 @@
 							"path": [
 								"api",
 								"photos",
-								"1"
+								"8"
 							]
 						}
 					},
@@ -320,12 +320,24 @@
 		},
 		{
 			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable('access_token', responseData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"NichollsLedesma\",\n    \"password\": \"asdasdads\"\n}",
+					"raw": "{\n    \"username\": \"Nicholls\",\n    \"password\": \"asdasdads\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

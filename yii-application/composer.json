@@ -24,7 +24,8 @@
         "igogo5yo/yii2-upload-from-url": ">=1.0",
         "yiisoft/yii2-bootstrap4": "~2.0.6",
         "rmrevin/yii2-fontawesome": "~3.5",
-        "yii2mod/yii2-helpers": "*"
+        "yii2mod/yii2-helpers": "*",
+        "dersonsena/yii2-jwt-tools": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

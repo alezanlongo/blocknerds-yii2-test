@@ -3,11 +3,13 @@
 namespace common\models;
 
 use common\models\Favorites;
+use Dersonsena\JWTTools\JWTTools;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\helpers\BaseFileHelper;
+use yii\helpers\VarDumper;
 use yii\web\IdentityInterface;
 
 /**
@@ -74,7 +76,10 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        return static::findOne(['auth_key' => $token]);
+        $decodedToken = JWTTools::build(Yii::$app->params['jwt']['secret'])
+            ->decodeToken($token);
+
+        return static::findOne(['id' => $decodedToken->sub]);
     }
 
     /**
