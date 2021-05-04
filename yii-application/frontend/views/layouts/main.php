@@ -45,7 +45,7 @@ AppAsset::register($this);
         } else {
             $menuItems = [
                 ['label' => 'UnSplash', 'url' => ['/unsplash/index']],
-                ['label' => 'Manage', 'url' => ['/collection/index']],
+                ['label' => 'Collections', 'url' => ['/collection/index']],
             ];
 
             $menuItems[] = '<li>'
