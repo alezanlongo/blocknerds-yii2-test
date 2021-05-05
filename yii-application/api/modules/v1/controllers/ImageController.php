@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers\api;
+namespace api\modules\v1\controllers;
 
 use common\models\Collection;
 use common\models\Image;
