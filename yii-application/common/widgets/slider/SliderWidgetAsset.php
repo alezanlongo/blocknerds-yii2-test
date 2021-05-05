@@ -17,6 +17,9 @@ class SliderWidgetAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset'
     ];
+    public $publishOptions = [
+        'forceCopy' => true,
+    ];
     public function init()
     {
         // Tell AssetBundle where the assets files are
