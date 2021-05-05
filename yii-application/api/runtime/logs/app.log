@@ -1,0 +1,2413 @@
+2021-05-05 16:33:20 [172.20.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2021-05-05 16:33:20 [172.20.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Object configuration must be an array containing a "class" or "__class" element. in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#2 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#3 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#6 {main}
+2021-05-05 16:33:20 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '879fbce3-6ba3-4940-b443-c28291ec0ddd'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60056'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collections'
+    'REQUEST_URI' => '/v1/collections'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620243200.3128
+    'REQUEST_TIME' => 1620243200
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 17:51:10 [172.20.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Object configuration must be an array containing a "class" or "__class" element. in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#2 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#3 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 /var/www/html/api/web/index.php(17): yii\base\Application->run()
+#6 {main}
+2021-05-05 17:51:10 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'fc175873-e43e-4340-81a0-0af3946151e7'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60642'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collections'
+    'REQUEST_URI' => '/v1/collections'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620247870.6186
+    'REQUEST_TIME' => 1620247870
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 17:52:03 [172.20.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2021-05-05 17:52:03 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'e4113d60-74ed-4dea-9cb9-185bdd0d5e75'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60642'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collections'
+    'REQUEST_URI' => '/v1/collections'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620247923.3423
+    'REQUEST_TIME' => 1620247923
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 17:53:55 [172.20.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2021-05-05 17:53:55 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '29f34a9c-b8fa-405a-a012-1c339fea8ef8'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60670'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collections'
+    'REQUEST_URI' => '/v1/collections'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248035.77
+    'REQUEST_TIME' => 1620248035
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 17:54:40 [172.20.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2021-05-05 17:54:40 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '103a904c-b517-4d34-ae26-7255366dc678'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60670'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collections'
+    'REQUEST_URI' => '/v1/collections'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248080.373
+    'REQUEST_TIME' => 1620248080
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 17:55:38 [172.20.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(17): yii\base\Application->run()
+#3 {main}
+2021-05-05 17:55:38 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => '1ef348c1e570d6041e2657b64356a7317f6cf35948b44424838a35911b72eb82a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2r00sgaIpsaBUlGIwuDYluMZ5PJ4zmYX\";}'
+    'advanced-backend' => 'bd30c3cccbe21123d2e9d265e74dd292'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf-backend=1ef348c1e570d6041e2657b64356a7317f6cf35948b44424838a35911b72eb82a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222r00sgaIpsaBUlGIwuDYluMZ5PJ4zmYX%22%3B%7D; advanced-backend=bd30c3cccbe21123d2e9d265e74dd292'
+    'HTTP_CONTENT_LENGTH' => '66'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_POSTMAN_TOKEN' => 'fa5a0b9e-31c0-4b3a-8482-f9b825aac647'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60694'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//auth/login'
+    'REQUEST_URI' => '/auth/login'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '66'
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248138.8279
+    'REQUEST_TIME' => 1620248138
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 17:55:53 [172.20.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Object configuration must be an array containing a "class" or "__class" element. in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#1 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#2 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#3 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 /var/www/html/api/web/index.php(17): yii\base\Application->run()
+#6 {main}
+2021-05-05 17:55:53 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'd5bc82ab-f062-4ecb-9d20-eed7224ee915'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60702'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248153.1766
+    'REQUEST_TIME' => 1620248153
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 17:56:37 [172.20.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(17): yii\base\Application->run()
+#11 {main}
+2021-05-05 17:56:37 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '26858e03-f8d5-4946-9bdc-d8fb8b79466f'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60702'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248197.8847
+    'REQUEST_TIME' => 1620248197
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 17:57:39 [172.20.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(17): yii\base\Application->run()
+#11 {main}
+2021-05-05 17:57:39 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'a16dd80c-6568-40ed-878c-ca0d5cf1ecb7'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60702'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248259.7751
+    'REQUEST_TIME' => 1620248259
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:00:22 [172.20.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(16): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:00:22 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '5ade4b01-b409-42fc-bf81-dc5cbf8aea65'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60756'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248422.3672
+    'REQUEST_TIME' => 1620248422
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:03:12 [172.20.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:03:12 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'b592a49f-28cf-463f-b61e-7b76b775c49b'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60810'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248592.7062
+    'REQUEST_TIME' => 1620248592
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:03:20 [172.20.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:03:20 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'e7881c31-5ace-4093-8264-81b9f6c5eda7'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60810'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248600.0471
+    'REQUEST_TIME' => 1620248600
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:04:08 [172.20.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:04:08 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '5e7580b5-925e-4d40-b957-1d59afc2cfc9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60810'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248648.4596
+    'REQUEST_TIME' => 1620248648
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:05:01 [172.20.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:05:01 [172.20.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '76e3dbb4f8f8'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '548529ab-eb6c-46b2-8a15-4e498a4712b0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.20.0.6'
+    'REMOTE_PORT' => '60810'
+    'REMOTE_ADDR' => '172.20.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620248701.4472
+    'REQUEST_TIME' => 1620248701
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:14:25 [172.21.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:14:25 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '3f95eb45-f78c-4f1b-be1e-80b9ea85509c'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '58954'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249265.3552
+    'REQUEST_TIME' => 1620249265
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:18:40 [172.21.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:18:40 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'c43bd224-0df9-4e9e-97cf-0ecbad2c59a6'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '58994'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249520.7469
+    'REQUEST_TIME' => 1620249520
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:21:42 [172.21.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:21:42 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '4e8f685c-d168-4677-97c8-457b1c3c9f77'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59030'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249702.5925
+    'REQUEST_TIME' => 1620249702
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:21:48 [172.21.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:21:48 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '9fc35021-6d37-4290-8e43-2e378cc0379f'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59030'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249708.5372
+    'REQUEST_TIME' => 1620249708
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:22:19 [172.21.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:22:19 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '3143d0c5-5ae9-4ec4-a1ac-a4416a8d2921'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59030'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249739.6945
+    'REQUEST_TIME' => 1620249739
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:22:41 [172.21.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\modules\v1\Module' in file: /var/www/html/api/modules/v1/Module.php. Namespace missing? in /var/www/html/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\v1\\...')
+#1 /var/www/html/vendor/yiisoft/yii2/di/Container.php(508): ReflectionClass->__construct('api\\modules\\v1\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/di/Container.php(386): yii\di\Container->getDependencies('api\\modules\\v1\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#4 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('api\\modules\\v1\\...', Array, Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Module.php(592): yii\base\Module->getModule('v1')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Module->createController('collection/inde...')
+#8 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2021-05-05 18:22:41 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '4e65465a-16d5-4ab3-ace8-e1d841167681'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59030'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249761.8521
+    'REQUEST_TIME' => 1620249761
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:23:10 [172.21.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined array key "jwt" in /var/www/html/common/models/User.php:79
+Stack trace:
+#0 /var/www/html/common/models/User.php(79): yii\web\ErrorHandler->handleError(code: '2', message: ''Undefined arra...', file: ''/var/www/html/...', line: '79')
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(305): common\models\User::findIdentityByAccessToken(token: ''eyJ0eXAiOiJKV1...', type: ''yii\\\\filters\\\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/filters/auth/HttpHeaderAuth.php(62): yii\web\User->loginByAccessToken(token: ''eyJ0eXAiOiJKV1...', type: ''yii\\\\filters\\\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(73): yii\filters\auth\HttpBearerAuth->authenticate(user: 'class yii\\web\\U...', request: 'class yii\\web\\R...', response: 'class yii\\web\\R...')
+#4 /var/www/html/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(59): yii\filters\auth\CompositeAuth->authenticate(user: 'class yii\\web\\U...', request: 'class yii\\web\\R...', response: 'class yii\\web\\R...')
+#5 /var/www/html/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\CompositeAuth->beforeAction(action: 'class yii\\base\\...')
+#6 /var/www/html/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(action: 'class yii\\base\\...')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Component.php(628): yii\filters\auth\CompositeAuth->beforeFilter(event: 'class yii\\base\\...')
+#8 /var/www/html/vendor/yiisoft/yii2/base/Component.php(628): ::call_user_func:{/var/www/html/vendor/yiisoft/yii2/base/Component.php:628}(callback: '[0 => class yii...', args: Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(300): api\modules\v1\controllers\CollectionController->trigger(name: ''beforeAction'', event: 'class yii\\base\\...')
+#10 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(214): api\modules\v1\controllers\CollectionController->beforeAction(action: 'class yii\\base\\...')
+#11 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(179): api\modules\v1\controllers\CollectionController->beforeAction(action: 'class yii\\base\\...')
+#12 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): api\modules\v1\controllers\CollectionController->runAction(id: ''index'', params: '[]')
+#13 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\web\Application->runAction(route: ''v1/collection/...', params: '[]')
+#14 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(request: 'class yii\\web\\R...')
+#15 /var/www/html/api/web/index.php(18): yii\web\Application->run()
+#16 {main}
+2021-05-05 18:23:10 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '46fb4578-94e7-4499-8954-dbef054b5fd5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59030'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249790.4538
+    'REQUEST_TIME' => 1620249790
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:23:23 [172.21.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined array key "jwt" in /var/www/html/common/models/User.php:79
+Stack trace:
+#0 /var/www/html/common/models/User.php(79): yii\web\ErrorHandler->handleError(code: '2', message: ''Undefined arra...', file: ''/var/www/html/...', line: '79')
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(305): common\models\User::findIdentityByAccessToken(token: ''eyJ0eXAiOiJKV1...', type: ''yii\\\\filters\\\\...')
+#2 /var/www/html/vendor/yiisoft/yii2/filters/auth/HttpHeaderAuth.php(62): yii\web\User->loginByAccessToken(token: ''eyJ0eXAiOiJKV1...', type: ''yii\\\\filters\\\\...')
+#3 /var/www/html/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(73): yii\filters\auth\HttpBearerAuth->authenticate(user: 'class yii\\web\\U...', request: 'class yii\\web\\R...', response: 'class yii\\web\\R...')
+#4 /var/www/html/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(59): yii\filters\auth\CompositeAuth->authenticate(user: 'class yii\\web\\U...', request: 'class yii\\web\\R...', response: 'class yii\\web\\R...')
+#5 /var/www/html/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\CompositeAuth->beforeAction(action: 'class yii\\base\\...')
+#6 /var/www/html/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(action: 'class yii\\base\\...')
+#7 /var/www/html/vendor/yiisoft/yii2/base/Component.php(628): yii\filters\auth\CompositeAuth->beforeFilter(event: 'class yii\\base\\...')
+#8 /var/www/html/vendor/yiisoft/yii2/base/Component.php(628): ::call_user_func:{/var/www/html/vendor/yiisoft/yii2/base/Component.php:628}(callback: '[0 => class yii...', args: Array)
+#9 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(300): api\modules\v1\controllers\CollectionController->trigger(name: ''beforeAction'', event: 'class yii\\base\\...')
+#10 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(214): api\modules\v1\controllers\CollectionController->beforeAction(action: 'class yii\\base\\...')
+#11 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(179): api\modules\v1\controllers\CollectionController->beforeAction(action: 'class yii\\base\\...')
+#12 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): api\modules\v1\controllers\CollectionController->runAction(id: ''index'', params: '[]')
+#13 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\web\Application->runAction(route: ''v1/collection/...', params: '[]')
+#14 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(request: 'class yii\\web\\R...')
+#15 /var/www/html/api/web/index.php(18): yii\web\Application->run()
+#16 {main}
+2021-05-05 18:23:23 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '7ef94472-0ef0-4264-87ec-477f344f33f8'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59030'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249803.0561
+    'REQUEST_TIME' => 1620249803
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:23:32 [172.21.0.1][-][-][error][Firebase\JWT\ExpiredException] Firebase\JWT\ExpiredException: Expired token in /var/www/html/vendor/firebase/php-jwt/src/JWT.php:144
+Stack trace:
+#0 /var/www/html/vendor/dersonsena/yii2-jwt-tools/src/JWTTools.php(145): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', 'bL0ckn3rs', Array)
+#1 /var/www/html/common/models/User.php(80): Dersonsena\JWTTools\JWTTools->decodeToken('eyJ0eXAiOiJKV1Q...')
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(305): common\models\User::findIdentityByAccessToken('eyJ0eXAiOiJKV1Q...', 'yii\\filters\\aut...')
+#3 /var/www/html/vendor/yiisoft/yii2/filters/auth/HttpHeaderAuth.php(62): yii\web\User->loginByAccessToken('eyJ0eXAiOiJKV1Q...', 'yii\\filters\\aut...')
+#4 /var/www/html/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(73): yii\filters\auth\HttpHeaderAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#5 /var/www/html/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(59): yii\filters\auth\CompositeAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#6 /var/www/html/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/html/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#8 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#9 /var/www/html/vendor/yiisoft/yii2/base/Component.php(628): call_user_func(Array, Object(yii\base\ActionEvent))
+#10 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(300): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#11 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(214): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#12 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(179): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#13 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('index', Array)
+#14 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#15 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#17 {main}
+2021-05-05 18:23:32 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'f531aa5e-903b-4ed2-a50b-266c4637f624'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59030'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249812.4756
+    'REQUEST_TIME' => 1620249812
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:24:13 [172.21.0.1][-][-][error][Firebase\JWT\ExpiredException] Firebase\JWT\ExpiredException: Expired token in /var/www/html/vendor/firebase/php-jwt/src/JWT.php:144
+Stack trace:
+#0 /var/www/html/vendor/dersonsena/yii2-jwt-tools/src/JWTTools.php(145): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', 'bL0ckn3rs', Array)
+#1 /var/www/html/common/models/User.php(80): Dersonsena\JWTTools\JWTTools->decodeToken('eyJ0eXAiOiJKV1Q...')
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(305): common\models\User::findIdentityByAccessToken('eyJ0eXAiOiJKV1Q...', 'yii\\filters\\aut...')
+#3 /var/www/html/vendor/yiisoft/yii2/filters/auth/HttpHeaderAuth.php(62): yii\web\User->loginByAccessToken('eyJ0eXAiOiJKV1Q...', 'yii\\filters\\aut...')
+#4 /var/www/html/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(73): yii\filters\auth\HttpHeaderAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#5 /var/www/html/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(59): yii\filters\auth\CompositeAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#6 /var/www/html/vendor/yiisoft/yii2/filters/auth/CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/html/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#8 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#9 /var/www/html/vendor/yiisoft/yii2/base/Component.php(628): call_user_func(Array, Object(yii\base\ActionEvent))
+#10 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(300): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#11 /var/www/html/vendor/yiisoft/yii2/web/Controller.php(214): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#12 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(179): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#13 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('index', Array)
+#14 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/i...', Array)
+#15 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#17 {main}
+2021-05-05 18:24:13 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'ed7aaf30-4b08-4383-b4f0-5e131464e721'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59030'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249853.2451
+    'REQUEST_TIME' => 1620249853
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:24:19 [172.21.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:24:19 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => '1ef348c1e570d6041e2657b64356a7317f6cf35948b44424838a35911b72eb82a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2r00sgaIpsaBUlGIwuDYluMZ5PJ4zmYX\";}'
+    'advanced-backend' => 'bd30c3cccbe21123d2e9d265e74dd292'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf-backend=1ef348c1e570d6041e2657b64356a7317f6cf35948b44424838a35911b72eb82a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222r00sgaIpsaBUlGIwuDYluMZ5PJ4zmYX%22%3B%7D; advanced-backend=bd30c3cccbe21123d2e9d265e74dd292'
+    'HTTP_CONTENT_LENGTH' => '66'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_POSTMAN_TOKEN' => '16f35746-b9d8-49c9-80f0-7d116897a67a'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59086'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//auth/login'
+    'REQUEST_URI' => '/auth/login'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '66'
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249859.6512
+    'REQUEST_TIME' => 1620249859
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:24:30 [172.21.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:24:30 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_CONTENT_LENGTH' => '66'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'a86c6527-0007-46a8-a023-3c3b1452f26f'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59030'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//auth/login'
+    'REQUEST_URI' => '/auth/login'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '66'
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620249870.3093
+    'REQUEST_TIME' => 1620249870
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:27:22 [172.21.0.1][3][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/api/config/params-local.php on line 1. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:27:22 [172.21.0.1][3][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'FLemxiuXMUmKqALXF7xfsO_to0m1D0o3'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=FLemxiuXMUmKqALXF7xfsO_to0m1D0o3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'f783167f-60f1-4954-a384-62d948a0ee1e'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59128'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620250042.7436
+    'REQUEST_TIME' => 1620250042
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:32:32 [172.21.0.1][3][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/api/config/params-local.php on line 1. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:32:32 [172.21.0.1][3][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'FLemxiuXMUmKqALXF7xfsO_to0m1D0o3'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=FLemxiuXMUmKqALXF7xfsO_to0m1D0o3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'f89fa91a-8ad1-413d-bd92-826b5815cab7'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59202'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620250352.1257
+    'REQUEST_TIME' => 1620250352
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:35:00 [172.21.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:35:00 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'M0TLKrbgk0vwcro5LJCZOgLynoXNU5bw'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=M0TLKrbgk0vwcro5LJCZOgLynoXNU5bw'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '4e785a54-9924-4ed9-bb8d-b4b2c113c58b'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59232'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620250500.1306
+    'REQUEST_TIME' => 1620250500
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:35:20 [172.21.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:35:20 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'M0TLKrbgk0vwcro5LJCZOgLynoXNU5bw'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=M0TLKrbgk0vwcro5LJCZOgLynoXNU5bw'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'e1a8e1c3-43cc-4c5b-a8bd-ce0086ba4623'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59232'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620250520.0206
+    'REQUEST_TIME' => 1620250520
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:35:21 [172.21.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:35:21 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'M0TLKrbgk0vwcro5LJCZOgLynoXNU5bw'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=M0TLKrbgk0vwcro5LJCZOgLynoXNU5bw'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '730b936c-82d0-4e9f-9d2e-06bcbd2e3131'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59232'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection'
+    'REQUEST_URI' => '/v1/collection'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620250521.4648
+    'REQUEST_TIME' => 1620250521
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:40:46 [172.21.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:40:46 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'EMlMVDPrS0d5zOKv7IU842un7tbc310c'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=EMlMVDPrS0d5zOKv7IU842un7tbc310c'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'a3814130-9c49-4131-9986-112bbcf2932b'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59304'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//api/photos'
+    'REQUEST_URI' => '/api/photos'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620250846.2298
+    'REQUEST_TIME' => 1620250846
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:41:05 [172.21.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:41:05 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'EMlMVDPrS0d5zOKv7IU842un7tbc310c'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=EMlMVDPrS0d5zOKv7IU842un7tbc310c'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'fb7325e9-58ec-40fc-9f26-9e4153386818'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59304'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/photos'
+    'REQUEST_URI' => '/v1/photos'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620250865.3077
+    'REQUEST_TIME' => 1620250865
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:42:58 [172.21.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:42:58 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'pXyKvB-PSVt17Oji05XcQr_RM398_sJo'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => 'a913108c46d7'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=pXyKvB-PSVt17Oji05XcQr_RM398_sJo'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '13e42589-00cd-4b94-ac17-525ec24300f2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.6'
+    'REMOTE_PORT' => '59402'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collections'
+    'REQUEST_URI' => '/v1/collections'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620250978.5897
+    'REQUEST_TIME' => 1620250978
+    'argv' => []
+    'argc' => 0
+]

@@ -45,23 +45,23 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'enableStrictParsing' => false,
-            'showScriptName' => false,
+            // 'enableStrictParsing' => false,
+            // 'showScriptName' => false,
             'rules' => [
-                'POST auth/login' => 'api/auth/login',
-                // 'GET,HEAD api/collection' => 'api/collection/index',
-                // 'GET,HEAD api/collection/<id>' => 'api/collection/view',
-                // 'PUT,PATCH api/collection/<id>' => 'api/collection/update',
-                // 'POST api/collection' => 'api/collection/create',
-                // 'DELETE api/collection/<id>' => 'api/collection/delete'
-                [
-                    'class' => UrlRule::class,
-                    'controller' => 'api/collection',
-                ],
-                [
-                    'class' => UrlRule::class,
-                    'controller' => 'api/photo',
-                ],
+            //     'POST auth/login' => 'api/auth/login',
+            //     // 'GET,HEAD api/collection' => 'api/collection/index',
+            //     // 'GET,HEAD api/collection/<id>' => 'api/collection/view',
+            //     // 'PUT,PATCH api/collection/<id>' => 'api/collection/update',
+            //     // 'POST api/collection' => 'api/collection/create',
+            //     // 'DELETE api/collection/<id>' => 'api/collection/delete'
+            //     [
+            //         'class' => UrlRule::class,
+            //         'controller' => 'api/collection',
+            //     ],
+            //     [
+            //         'class' => UrlRule::class,
+            //         'controller' => 'api/photo',
+            //     ],
             ],
         ],
     ],

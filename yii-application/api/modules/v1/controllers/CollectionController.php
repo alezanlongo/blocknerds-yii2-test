@@ -1,16 +1,12 @@
 <?php
 
-namespace frontend\controllers\api;
+namespace api\modules\v1\controllers;
 
 use common\models\Collection;
-use common\models\Photo;
-use DateTime;
-use Error;
 use Yii;
 use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBearerAuth;
 use yii\rest\ActiveController;
-use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\web\ServerErrorHttpException;
 use yii\web\UnprocessableEntityHttpException;

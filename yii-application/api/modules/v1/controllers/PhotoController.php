@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers\api;
+namespace api\modules\v1\controllers;
 
 use common\models\Photo;
 use Yii;
@@ -10,7 +10,6 @@ use yii\helpers\ArrayHelper;
 use yii\rest\ActiveController;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
-use yii\web\ServerErrorHttpException;
 use yii\web\UnprocessableEntityHttpException;
 
 class PhotoController extends ActiveController
