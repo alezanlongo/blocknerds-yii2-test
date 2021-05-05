@@ -86,10 +86,13 @@ class CollectionController extends ActiveController
         if ($collection->user_id !== Yii::$app->user->id) {
             throw new \yii\web\ForbiddenHttpException('You are unauthorized to access the requested resource.');
         }
-        if ($collection->load(Yii::$app->request->post()) && $collection->save()) {
+
+        $fields['Collection'] = Yii::$app->request->post();
+
+        if ($collection->load($fields) && $collection->save()) {
             return $collection;
         } else {
-            throw new \yii\web\ServerErrorHttpException();
+            throw new \yii\web\UnprocessableEntityHttpException('Validation problems were found');
         }
 
         return $collection;
@@ -98,13 +101,13 @@ class CollectionController extends ActiveController
     public function actionCreate()
     {
         $model = new Collection();
-        $fields = Yii::$app->request->post();
+        $fields['Collection'] = Yii::$app->request->post();
         $fields['Collection']['user_id'] = Yii::$app->user->identity->getId();
 
         if ($model->load($fields) && $model->save()) {
             return $model;
         } else {
-            throw new \yii\web\ServerErrorHttpException();
+            throw new \yii\web\UnprocessableEntityHttpException('Validation problems were found');
         }
     }
 }

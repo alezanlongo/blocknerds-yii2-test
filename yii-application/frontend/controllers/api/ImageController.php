@@ -49,13 +49,9 @@ class ImageController extends ActiveController
 
     public function actionIndex()
     {
-        $collectionsIds = Collection::find()->where(['user_id' => Yii::$app->user->id])->select('id')->column();
-
-        if (!$collectionsIds) {
-            throw new \yii\web\NotFoundHttpException();
-        }
-
-        $images = Image::findAll(['collection_id' => $collectionsIds]);
+        $subQuery = Collection::find()->where(['user_id' => Yii::$app->user->id])->select('id');
+        $query = Image::find()->where(['in', 'collection_id', $subQuery]);
+        $images = $query->all();
 
         if (count($images) < 1) {
             throw new \yii\web\NotFoundHttpException();
@@ -108,16 +104,18 @@ class ImageController extends ActiveController
             throw new \yii\web\NotFoundHttpException();
         }
 
-        $collection = $image->getCollection()->one();
+        $collection = $image->getCollection()->limit(1)->one();
 
         if ($collection->user_id !== Yii::$app->user->id) {
             throw new \yii\web\ForbiddenHttpException('You are unauthorized to access the requested resource.');
         }
-        
-        if ($image->load(Yii::$app->request->post()) && $image->save()) {
+
+        $fields['Image'] = Yii::$app->request->post();
+
+        if ($image->load($fields) && $image->save()) {
             return $image;
         } else {
-            throw new \yii\web\ServerErrorHttpException();
+            throw new \yii\web\UnprocessableEntityHttpException('Validation problems were found');
         }
     }
 }
