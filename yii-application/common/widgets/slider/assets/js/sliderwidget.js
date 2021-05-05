@@ -1,52 +1,68 @@
-jQuery(document).ready(function ($) {
-  $("#checkbox").change(function () {
-    setInterval(function () {
-      moveRight();
+var myInterval = null;
+
+$("#checkbox").change(function () {
+  if ($(this).prop("checked") == true) {
+    myInterval = setInterval(function () {
+      $(".next").click();
     }, 3000);
-  });
-
-  var slideCount = $("#slider ul li").length;
-  var slideWidth = $("#slider ul li").width();
-  var slideHeight = $("#slider ul li").height();
-  var sliderUlWidth = slideCount * slideWidth;
-
-  $("#slider").css({ width: slideWidth, height: slideHeight });
-
-  $("#slider ul").css({ width: sliderUlWidth, marginLeft: -slideWidth });
-
-  $("#slider ul li:last-child").prependTo("#slider ul");
-
-  function moveLeft() {
-    $("#slider ul").animate(
-      {
-        left: +slideWidth,
-      },
-      200,
-      function () {
-        $("#slider ul li:last-child").prependTo("#slider ul");
-        $("#slider ul").css("left", "");
-      }
-    );
+  } else if ($(this).prop("checked") == false) {
+    myStopFunction();
   }
-
-  function moveRight() {
-    $("#slider ul").animate(
-      {
-        left: -slideWidth,
-      },
-      200,
-      function () {
-        $("#slider ul li:first-child").appendTo("#slider ul");
-        $("#slider ul").css("left", "");
-      }
-    );
-  }
-
-  $("a.control_prev").click(function () {
-    moveLeft();
-  });
-
-  $("a.control_next").click(function () {
-    moveRight();
-  });
 });
+
+function myStopFunction() {
+  clearInterval(myInterval);
+}
+
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+// function startSlider() {
+//   if ((document.getElementById("checkbox").checked == true)) {
+//     setInterval(function () {
+//       $(".next").click();
+//     }, 3000);
+//   }
+// }

@@ -11,8 +11,8 @@ class SliderWidgetAsset extends AssetBundle
     ];
 
     public $css = [
-        // CDN lib
-        '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
+        // // CDN lib
+        // '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
         'css/sliderwidget.css'
     ];
 
