@@ -2,6 +2,7 @@
 
 namespace api\modules\v1\controllers;
 
+use common\models\Collection;
 use common\models\Photo;
 use Yii;
 use yii\filters\auth\CompositeAuth;
@@ -45,19 +46,26 @@ class PhotoController extends ActiveController
             $actions['view']
         );
 
-
         return $actions;
     }
 
     public function actionIndex()
     {
-        $collectionsIds = ArrayHelper::getColumn(Yii::$app->user->getIdentity()->collections,'id');
-
-        if (!$collectionsIds) {
-            return [];
+        $subQuery = Collection::find()
+            ->where(['user_id' => Yii::$app->user->id])
+            ->select('id');
+        $query = Photo::find()->where(['in', 'collection_id', $subQuery]);
+        $photos = $query->all();
+        // $collectionsIds = ArrayHelper::getColumn(Yii::$app->user->getIdentity()->collections,'id');
+        // if (!$collectionsIds) {
+        //     return [];
+        // }
+        // return Photo::findAll(['collection_id' => $collectionsIds]);
+        if (count($photos) < 1) {
+            throw new NotFoundHttpException("photos not found.");
         }
 
-        return Photo::findAll(['collection_id' => $collectionsIds]);
+        return $photos;
     }
 
     public function actionView($id)
@@ -90,14 +98,13 @@ class PhotoController extends ActiveController
         $photo->title = $data["title"];
         $photo->description = $data["description"];
 
-        if(!$photo->validate()){
+        if (!$photo->validate()) {
             throw new UnprocessableEntityHttpException('Invalid data');
         }
 
         $photo->save();
 
         return $photo;
-        
     }
 
     public function actionDelete($id)

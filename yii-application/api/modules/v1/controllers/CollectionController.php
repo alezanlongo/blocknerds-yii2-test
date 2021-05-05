@@ -53,28 +53,37 @@ class CollectionController extends ActiveController
         return  Yii::$app->user->getIdentity()->collections;
     }
 
-
     public function actionView($id)
     {
-        return Yii::$app->user->getIdentity()
-            ->getCollections()->with("photos")
-            ->where(["id" => $id])
-            ->asArray()->one();
+        $collection = Collection::find()
+            ->select(['id', 'title', 'created_at'])
+            ->where([
+                'id' => $id,
+                'user_id' => Yii::$app->user->id
+                ])
+            ->with('photos')
+            ->asArray()->all();
+
+        if (!$collection) {
+            throw new NotFoundHttpException('Collection not found.');
+        }
+        return $collection;
     }
 
     public function actionCreate()
     {
-        try {
-            $data = Yii::$app->request->post();
-            $newCollection = new Collection();
-            $newCollection->title = $data["title"];
-            $newCollection->user_id = Yii::$app->user->id;
-            $newCollection->save();
-    
-            return $newCollection;
-        } catch (\Throwable $e) {
-            throw new ServerErrorHttpException();
+        $data = Yii::$app->request->post();
+        $newCollection = new Collection();
+        $newCollection->title = $data["title"];
+        $newCollection->user_id = Yii::$app->user->id;
+
+        if (!$newCollection->validate()) {
+            throw new UnprocessableEntityHttpException('Invalid data');
         }
+
+        $newCollection->save();
+
+        return $newCollection;
     }
 
     public function actionUpdate($id)
@@ -82,7 +91,7 @@ class CollectionController extends ActiveController
         $collection = Collection::find()->where([
             'user_id' => Yii::$app->user->id,
             'id' => $id
-        ])->one();
+        ])->limit(1)->one();
 
         if (!$collection) {
             throw new NotFoundHttpException('Collection not found.');
@@ -90,8 +99,8 @@ class CollectionController extends ActiveController
 
         $data = Yii::$app->request->post();
         $collection->title = $data["title"];
-        
-        if(!$collection->validate()){
+
+        if (!$collection->validate()) {
             throw new UnprocessableEntityHttpException('Invalid data');
         }
 
@@ -105,7 +114,7 @@ class CollectionController extends ActiveController
         $collection = Collection::find()->where([
             'user_id' => Yii::$app->user->id,
             'id' => $id
-        ])->one();
+        ])->limit(1)->one();
 
         if (!$collection) {
             throw new NotFoundHttpException('Collection not found.');

@@ -2411,3 +2411,886 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2021-05-05 18:56:13 [172.23.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:56:13 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3s9L7brwrWrzgw5dFMTkQY10M6VbHNJ5'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=3s9L7brwrWrzgw5dFMTkQY10M6VbHNJ5'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '6aa423fb-fef9-4267-90db-3da5b3dfa10b'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53016'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/photos/12'
+    'REQUEST_URI' => '/v1/photos/12'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620251773.5875
+    'REQUEST_TIME' => 1620251773
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:58:25 [172.23.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:293
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Application.php(83): yii\web\Request->resolve()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#3 {main}
+2021-05-05 18:58:25 [172.23.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3s9L7brwrWrzgw5dFMTkQY10M6VbHNJ5'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=3s9L7brwrWrzgw5dFMTkQY10M6VbHNJ5'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '12a072d8-dc3d-472c-8c1e-e15857685d41'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53054'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/photos/12'
+    'REQUEST_URI' => '/v1/photos/12'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620251905.5391
+    'REQUEST_TIME' => 1620251905
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 18:59:00 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Photo not found. in /var/www/html/api/modules/v1/controllers/PhotoController.php:73
+Stack trace:
+#0 /var/www/html/api/modules/v1/controllers/PhotoController.php(65): api\modules\v1\controllers\PhotoController->getPhoto('12')
+#1 [internal function]: api\modules\v1\controllers\PhotoController->actionView('12')
+#2 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/photo/view', Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2021-05-05 18:59:00 [172.23.0.1][3][-][info][application] $_GET = [
+    'id' => '12'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3s9L7brwrWrzgw5dFMTkQY10M6VbHNJ5'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=3s9L7brwrWrzgw5dFMTkQY10M6VbHNJ5'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'e41e65d7-03b5-4da9-9a1b-c2a7d7b3c6d4'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53054'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/photo/12'
+    'REQUEST_URI' => '/v1/photo/12'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620251940.1223
+    'REQUEST_TIME' => 1620251940
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 19:02:05 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Photo not found. in /var/www/html/api/modules/v1/controllers/PhotoController.php:73
+Stack trace:
+#0 /var/www/html/api/modules/v1/controllers/PhotoController.php(65): api\modules\v1\controllers\PhotoController->getPhoto('12')
+#1 [internal function]: api\modules\v1\controllers\PhotoController->actionView('12')
+#2 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/photo/view', Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2021-05-05 19:02:05 [172.23.0.1][3][-][info][application] $_GET = [
+    'id' => '12'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'E8pjU6vvTg_nf-0c4OCG3RgXZHppfSQk'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=E8pjU6vvTg_nf-0c4OCG3RgXZHppfSQk'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '3914480d-a6a0-48ab-bffe-3591b75785ab'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53112'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/photo/12'
+    'REQUEST_URI' => '/v1/photo/12'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620252125.971
+    'REQUEST_TIME' => 1620252125
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 19:03:54 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Collection not found. in /var/www/html/api/modules/v1/controllers/CollectionController.php:69
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\CollectionController->actionView('1')
+#1 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('view', Array)
+#4 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/v...', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2021-05-05 19:03:54 [172.23.0.1][3][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'zU22mRpP8meMRipEH9TWpf7nYBOtROLa'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=zU22mRpP8meMRipEH9TWpf7nYBOtROLa'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '1f742875-8d31-45e5-9cd7-06fb9d19cfb2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53146'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection/1'
+    'REQUEST_URI' => '/v1/collection/1'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620252234.3977
+    'REQUEST_TIME' => 1620252234
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 19:26:26 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Collection not found. in /var/www/html/api/modules/v1/controllers/CollectionController.php:68
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\CollectionController->actionView('6')
+#1 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('view', Array)
+#4 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/v...', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2021-05-05 19:26:26 [172.23.0.1][3][-][info][application] $_GET = [
+    'id' => '6'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'LiPkAyVbmx19SSHyH5av6WpnUhj2FZOc'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=LiPkAyVbmx19SSHyH5av6WpnUhj2FZOc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '90927f81-3bc9-47a7-b207-d8a8da515aa6'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53324'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection/6'
+    'REQUEST_URI' => '/v1/collection/6'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620253586.8896
+    'REQUEST_TIME' => 1620253586
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 19:26:57 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Collection not found. in /var/www/html/api/modules/v1/controllers/CollectionController.php:97
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\CollectionController->actionUpdate('13')
+#1 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('update', Array)
+#4 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/u...', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2021-05-05 19:26:57 [172.23.0.1][3][-][info][application] $_GET = [
+    'id' => '13'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'AQmA8KnULVPVRpBaFw-7KXXfrYspOxeJ'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=AQmA8KnULVPVRpBaFw-7KXXfrYspOxeJ'
+    'HTTP_CONTENT_LENGTH' => '30'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'df066f54-37c1-4c20-a857-d60b7ef08f9c'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53324'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection/13'
+    'REQUEST_URI' => '/v1/collection/13'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '30'
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620253617.7078
+    'REQUEST_TIME' => 1620253617
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 19:27:29 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Collection not found. in /var/www/html/api/modules/v1/controllers/CollectionController.php:68
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\CollectionController->actionView('15')
+#1 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('view', Array)
+#4 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/collection/v...', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2021-05-05 19:27:29 [172.23.0.1][3][-][info][application] $_GET = [
+    'id' => '15'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'RMjUit5QNhPhefZ8DIc-AH1hWTDr6dAk'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=RMjUit5QNhPhefZ8DIc-AH1hWTDr6dAk'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '6243be5d-cae6-491c-ab51-33047bff4e0d'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53324'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/collection/15'
+    'REQUEST_URI' => '/v1/collection/15'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620253649.9816
+    'REQUEST_TIME' => 1620253649
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 19:27:52 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Photo not found. in /var/www/html/api/modules/v1/controllers/PhotoController.php:81
+Stack trace:
+#0 /var/www/html/api/modules/v1/controllers/PhotoController.php(73): api\modules\v1\controllers\PhotoController->getPhoto('12')
+#1 [internal function]: api\modules\v1\controllers\PhotoController->actionView('12')
+#2 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/photo/view', Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2021-05-05 19:27:52 [172.23.0.1][3][-][info][application] $_GET = [
+    'id' => '12'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9DzlCPlqnf_cNqRUO8IWj6xKGcdethwJ'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=9DzlCPlqnf_cNqRUO8IWj6xKGcdethwJ'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '2878bf21-907a-43f6-a7d9-5b1ea70d59ab'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53324'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/photo/12'
+    'REQUEST_URI' => '/v1/photo/12'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620253672.8278
+    'REQUEST_TIME' => 1620253672
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 19:28:12 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Photo not found. in /var/www/html/api/modules/v1/controllers/PhotoController.php:81
+Stack trace:
+#0 /var/www/html/api/modules/v1/controllers/PhotoController.php(95): api\modules\v1\controllers\PhotoController->getPhoto('12')
+#1 [internal function]: api\modules\v1\controllers\PhotoController->actionUpdate('12')
+#2 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('update', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/photo/update', Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2021-05-05 19:28:12 [172.23.0.1][3][-][info][application] $_GET = [
+    'id' => '12'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'as8BPBKee_-HpiuVDU7SISrQB3juFaYi'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=as8BPBKee_-HpiuVDU7SISrQB3juFaYi'
+    'HTTP_CONTENT_LENGTH' => '64'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => '13e0dcd0-543c-486d-8651-fb60abf0a610'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53324'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/photo/12'
+    'REQUEST_URI' => '/v1/photo/12'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '64'
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'PUT'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620253692.6887
+    'REQUEST_TIME' => 1620253692
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 19:28:34 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Photo not found. in /var/www/html/api/modules/v1/controllers/PhotoController.php:81
+Stack trace:
+#0 /var/www/html/api/modules/v1/controllers/PhotoController.php(112): api\modules\v1\controllers\PhotoController->getPhoto('12')
+#1 [internal function]: api\modules\v1\controllers\PhotoController->actionDelete('12')
+#2 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('delete', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/photo/delete', Array)
+#6 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2021-05-05 19:28:34 [172.23.0.1][3][-][info][application] $_GET = [
+    'id' => '12'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'CMA-JVZ0BIDVMxMbsT22uoLHoUqDt_9R'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=CMA-JVZ0BIDVMxMbsT22uoLHoUqDt_9R'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'b3ca7c51-e013-4bb7-987c-8eab39c137fe'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53324'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/photo/12'
+    'REQUEST_URI' => '/v1/photo/12'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'DELETE'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620253714.0107
+    'REQUEST_TIME' => 1620253714
+    'argv' => []
+    'argc' => 0
+]
+2021-05-05 19:28:50 [172.23.0.1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: photos not found. in /var/www/html/api/modules/v1/controllers/PhotoController.php:65
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\PhotoController->actionIndex()
+#1 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('index', Array)
+#4 /var/www/html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('v1/photo/index', Array)
+#5 /var/www/html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/api/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2021-05-05 19:28:50 [172.23.0.1][3][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'n_b9xUPVb2g2gWfI15yIsg0SrULVCOe3'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '70a03af8c4dd'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '1'
+    'HOME' => '/home/www-data'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.0.3'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.3.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'c9816aa9745a9695672951eaff3a35ca5eddcb9cacf87a4f04b9fb1169010251'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => '_csrf=n_b9xUPVb2g2gWfI15yIsg0SrULVCOe3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_HOST' => 'api.test'
+    'HTTP_POSTMAN_TOKEN' => 'b456fe1f-e0b8-4cd1-84cd-16f14d2720b7'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.28.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'SCRIPT_FILENAME' => '/var/www/html/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'api.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.23.0.6'
+    'REMOTE_PORT' => '53324'
+    'REMOTE_ADDR' => '172.23.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.20.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/api/web'
+    'DOCUMENT_URI' => '/index.php//v1/photo'
+    'REQUEST_URI' => '/v1/photo'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1620253730.4863
+    'REQUEST_TIME' => 1620253730
+    'argv' => []
+    'argc' => 0
+]
