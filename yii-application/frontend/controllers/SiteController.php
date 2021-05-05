@@ -12,6 +12,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\Photo;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -81,25 +82,15 @@ class SiteController extends Controller
             return Yii::$app->getResponse()->redirect('site/login');
         }
 
-        $collections = Yii::$app->user->getIdentity()
-            ->getCollections()->with("photos")
-            ->asArray()->all();
+        $collectionsIds = ArrayHelper::getColumn(Yii::$app->user->getIdentity()->collections,'id');
 
-        
-
-        $images = [];
-        $collectionsPhotos = ArrayHelper::getColumn($collections, 'photos');
-        foreach ($collectionsPhotos as $photos) {
-            foreach ($photos as $photo) {
-                array_push($images, [
-                    "url" =>   $photo['url'],
-                    "title" =>   $photo['title'],
-                    "description" => $photo['description'],
-                ]);
-            }
+        if (!$collectionsIds) {
+            return [];
         }
-        
-        return $this->render('index', [
+
+        $images = Photo::findAll(['collection_id' => $collectionsIds]);
+
+        return $this->render('index2', [
             'collection' => $images
         ]);
     }

@@ -11,6 +11,7 @@ use yii\rest\ActiveController;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\web\ServerErrorHttpException;
+use yii\web\UnprocessableEntityHttpException;
 
 class PhotoController extends ActiveController
 {
@@ -89,6 +90,11 @@ class PhotoController extends ActiveController
         $data = Yii::$app->request->post();
         $photo->title = $data["title"];
         $photo->description = $data["description"];
+
+        if(!$photo->validate()){
+            throw new UnprocessableEntityHttpException('Invalid data');
+        }
+
         $photo->save();
 
         return $photo;

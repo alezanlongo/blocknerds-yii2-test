@@ -13,6 +13,7 @@ use yii\rest\ActiveController;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use yii\web\ServerErrorHttpException;
+use yii\web\UnprocessableEntityHttpException;
 
 class CollectionController extends ActiveController
 {
@@ -33,9 +34,6 @@ class CollectionController extends ActiveController
                 HttpBearerAuth::class,
             ],
         ];
-        // $behaviors['authenticator'] = [
-        //     'class' => HttpBearerAuth::class,
-        // ];
         return $behaviors;
     }
 
@@ -96,6 +94,11 @@ class CollectionController extends ActiveController
 
         $data = Yii::$app->request->post();
         $collection->title = $data["title"];
+        
+        if(!$collection->validate()){
+            throw new UnprocessableEntityHttpException('Invalid data');
+        }
+
         $collection->save();
 
         return $collection;
