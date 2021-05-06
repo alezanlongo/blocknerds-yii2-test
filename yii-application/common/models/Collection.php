@@ -34,7 +34,7 @@ class Collection extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title'], 'required'],
+            [['title', 'user_id'], 'required'],
             [['title'], 'string', 'max' => 255],
         ];
     }
@@ -42,7 +42,8 @@ class Collection extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function behaviors() {
+    public function behaviors()
+    {
         return [
             TimestampBehavior::class,
         ];
