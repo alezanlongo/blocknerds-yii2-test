@@ -5,3 +5,11 @@ modules:
     enabled:
         - Yii2:
             part: fixtures
+        # - Db:
+        #     dsn: 'pgsql:host=pgsql;dbname=unsplash_test'
+        #     user: 'dev'
+        #     password: 'd3v'
+        #     dump: 'tests/_data/db.sql'
+        #     populate: true # run populator before all tests
+        #     cleanup: true # run populator before each test
+        #     populator: 'pg_restore -u $user -h $host -D $dbname < $dump'

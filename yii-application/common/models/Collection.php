@@ -34,7 +34,8 @@ class Collection extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'user_id'], 'required'],
+            [['title'], 'required'],
+            ['user_id', 'exist', 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
             [['title'], 'string', 'max' => 255],
         ];
     }

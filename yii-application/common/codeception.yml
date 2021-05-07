@@ -13,3 +13,12 @@ modules:
     config:
         Yii2:
             configFile: 'config/codeception-local.php'
+    # enabled:
+    #     - Db:
+    #         dsn: 'pgsql:host=pgsql;dbname=unsplash_test'
+    #         user: 'dev'
+    #         password: 'd3v'
+    #         dump: 'tests/_data/db.sql'
+    #         populate: true # run populator before all tests
+    #         cleanup: true # run populator before each test
+    #         populator: 'pg_restore -u $user -h $host -D $dbname < $dump'

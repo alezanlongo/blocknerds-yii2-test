@@ -44,13 +44,13 @@ class Photo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['collection_id', 'photo_id', 'url', 'title', 'created_at', 'updated_at'], 'required'],
+            [['collection_id', 'photo_id', 'url', 'title'], 'required'],
             [['collection_id', 'created_at', 'updated_at'], 'default', 'value' => null],
             [['collection_id', 'created_at', 'updated_at'], 'integer'],
             [['description'], 'string'],
             [['photo_id'], 'string', 'max' => 20],
             [['url', 'title'], 'string', 'max' => 255],
-            [['collection_id'], 'exist', 'skipOnError' => true, 'targetClass' => Collection::class, 'targetAttribute' => ['collection_id' => 'id']],
+            [['collection_id'], 'exist', 'targetClass' => Collection::class, 'targetAttribute' => ['collection_id' => 'id']],
         ];
     }
 
