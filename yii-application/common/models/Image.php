@@ -50,6 +50,7 @@ class Image extends \yii\db\ActiveRecord
     {
         return [
             [['collection_id', 'url'], 'required'],
+            ['collection_id', 'exist', 'targetClass' => Collection::class, 'targetAttribute' => ['collection_id' => 'id']],
             [['collection_id', 'created_at', 'updated_at'], 'integer'],
             [['author', 'description', 'url'], 'string', 'max' => 255],
             [['author', 'description'], 'default', 'value' => null],

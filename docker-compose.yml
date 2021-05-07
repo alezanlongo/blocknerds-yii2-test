@@ -38,7 +38,7 @@ services:
     tty: true
     volumes:
       - ./postgresql:/var/lib/postgresql/data:rw
-      - ./pgsql/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh:ro
+      - ./pgsql/init-test-db.sql:/docker-entrypoint-initdb.d/init-test-db.sql
     ports:
       - 5432:5432
     environment:

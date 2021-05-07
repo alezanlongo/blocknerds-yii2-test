@@ -46,6 +46,7 @@ class Collection extends \yii\db\ActiveRecord
         return [
             [['title'], 'required'],
             [['user_id'], 'integer'],
+            ['user_id', 'exist', 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
             [['title'], 'string', 'max' => 255],
         ];
     }

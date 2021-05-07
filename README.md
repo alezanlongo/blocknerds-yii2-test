@@ -63,3 +63,11 @@ docker rmi -f $(docker images -a -q)
 
 ## Clean
 docker system prune  
+
+# Codeception (unit, functional, and acceptance tests)
+
+## Ceate a test
+php vendor/bin/codecept generate:test unit Example -c common
+
+## Run one test
+./vendor/bin/codecept run common/tests/unit/CollectionTest
