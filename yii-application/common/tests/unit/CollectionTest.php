@@ -37,25 +37,39 @@ class CollectionTest extends \Codeception\Test\Unit
 
     public function testCreateCollection()
     {
-        $stub = $this->make(Collection::class, [
-            "user_id" => 1,
+        $user = $this->tester->grabFixture('user', 0);
+
+        $this->tester->haveRecord(Collection::class, [
+            "user_id" => $user->id,
             "title" => "The Hobbit"
         ]);
-
-        $this->assertTrue($stub->validate());
-        $this->assertTrue($stub->save());
+        $this->tester->seeRecord(Collection::class, [
+            "user_id" => $user->id,
+            "title" => "The Hobbit"
+        ]);
+        // $stub = $this->make(Collection::class, [
+        //     "user_id" => 1,
+        //     "title" => "The Hobbit"
+        // ]);
+        // $this->assertTrue($stub->validate());
+        // $this->assertTrue($stub->save());
     }
 
     public function testCreateCollectionWrongUserId()
     {
-        $stub = $this->make(Collection::class, [
-            "user_id" => 2000,
-            "title" => "The Hobbit"
+        $userId = 200;
+        $user = $this->tester->grabFixture('user', $userId);
+        $this->assertEmpty($user);
+        $this->tester->dontSeeRecord(Collection::class, [
+            "user_id" => $userId,
         ]);
-
-        $this->assertTrue($stub->validate(['title']));
-        $this->assertFalse($stub->validate(['user_id']));
-        $this->assertFalse($stub->save());
+        // $stub = $this->make(Collection::class, [
+        //     "user_id" => 2000,
+        //     "title" => "The Hobbit"
+        // ]);
+        // $this->assertTrue($stub->validate(['title']));
+        // $this->assertFalse($stub->validate(['user_id']));
+        // $this->assertFalse($stub->save());
     }
 
     public function testCreateCollectionWrongTitle()

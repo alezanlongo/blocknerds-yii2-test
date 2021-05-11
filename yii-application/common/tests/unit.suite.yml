@@ -4,7 +4,7 @@ bootstrap: false
 modules:
     enabled:
         - Yii2:
-            part: fixtures
+            part: [orm, fixtures]
         # - Db:
         #     dsn: 'pgsql:host=pgsql;dbname=unsplash_test'
         #     user: 'dev'
