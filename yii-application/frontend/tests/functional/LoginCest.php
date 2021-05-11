@@ -54,9 +54,8 @@ class LoginCest
     {
         $I->see('Login', 'h1');
         $I->submitForm('#login-form', $this->formParams('erau', 'password_0'));
-        // $I->submitForm('#login-form', $this->formParams('erau', 'password_0'));
-        // $I->see('Logout (erau)', 'form button[type=submit]');
-        // $I->dontSeeLink('Login');
-        // $I->dontSeeLink('Signup');
+        $I->see('Logout (erau)', 'form button[type=submit]');
+        $I->dontSeeLink('Login');
+        $I->dontSeeLink('Signup');
     }
 }

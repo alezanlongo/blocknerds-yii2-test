@@ -78,16 +78,13 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+
+        
         if (Yii::$app->user->isGuest) {
             return Yii::$app->getResponse()->redirect('site/login');
         }
 
         $collectionsIds = ArrayHelper::getColumn(Yii::$app->user->getIdentity()->collections,'id');
-
-        if (!$collectionsIds) {
-            return [];
-        }
-
         $images = Photo::findAll(['collection_id' => $collectionsIds]);
 
         return $this->render('index2', [

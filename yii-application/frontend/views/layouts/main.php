@@ -37,7 +37,11 @@ AppAsset::register($this);
                 'class' => 'navbar navbar-expand-lg navbar-light bg-light',
             ],
         ]);
-        $menuItems = [];
+        $menuItems = [
+            [
+                'label' => 'About', 'url' => ['/site/about'],
+            ]
+        ];
         if (Yii::$app->user->isGuest) {
             $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
             $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
