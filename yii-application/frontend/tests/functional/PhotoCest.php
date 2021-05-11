@@ -34,13 +34,17 @@ class PhotoCest
         ];
     }
 
+    protected function formParams($login, $password)
+    {
+        return [
+            'LoginForm[username]' => $login,
+            'LoginForm[password]' => $password,
+        ];
+    }
     public function _before(FunctionalTester $I)
     {
-        $this->model = new LoginForm([
-            'username' => 'erau',
-            'password' => 'password_0',
-        ]);
-        $this->model->login();
+        $I->amOnPage(['site/login']);
+        $I->submitForm('#login-form', $this->formParams('erau', 'password_0'));
     }
 
     public function tryToGetPhoto(FunctionalTester $I)

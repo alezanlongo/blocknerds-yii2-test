@@ -4,6 +4,7 @@ namespace frontend\tests\functional;
 
 use Codeception\Util\ActionSequence;
 use common\fixtures\CollectionFixture;
+use common\fixtures\PhotoFixture;
 use common\fixtures\UserFixture;
 use common\models\Collection;
 use common\models\LoginForm;
@@ -33,26 +34,33 @@ class CollectionCest
                 'class' => CollectionFixture::class,
                 'dataFile' => codecept_data_dir() . 'collection.php',
             ],
+            'photo' => [
+                'class' => PhotoFixture::class,
+                'dataFile' => codecept_data_dir() . 'photo.php',
+            ],
+        ];
+    }
+
+    protected function formParams($login, $password)
+    {
+        return [
+            'LoginForm[username]' => $login,
+            'LoginForm[password]' => $password,
         ];
     }
 
     public function _before(FunctionalTester $I)
     {
-        $this->model = new LoginForm([
-            'username' => 'erau',
-            'password' => 'password_0',
-        ]);
-        $this->model->login();
-        // $I->amOnPage(['collection/index']);
-        // $I->submitForm('#login-form', $this->formParams('erau', 'password_0'));
+        $I->amOnPage(['site/login']);
+        $I->submitForm('#login-form', $this->formParams('erau', 'password_0'));
     }
 
-    private function getFirstCollecion()
-    {
-        return Collection::find()->where([
-            "user_id" => Yii::$app->user->id
-        ])->limit(1)->one();
-    }
+    // private function getFirstCollecion()
+    // {
+    //     return Collection::find()->where([
+    //         "user_id" => Yii::$app->user->id
+    //     ])->limit(1)->one();
+    // }
 
     public function tryToIndexCollection(FunctionalTester $I)
     {
@@ -64,36 +72,53 @@ class CollectionCest
     public function tryToCreateCollection(FunctionalTester $I)
     {
         $title = "Dogs";
-        $userId = Yii::$app->user->id;
 
         $I->amOnPage(['collection/create']);
         $I->submitForm($this->formId, [
             'Collection[title]' => $title,
         ]);
         $I->seeRecord(Collection::class, [
-            'user_id' => $userId,
+            'user_id' => Yii::$app->user->id,
             'title' => $title,
         ]);
     }
 
+    public function tryToCreateEmptyCollection(FunctionalTester $I)
+    {
+        $title = "";
+        $I->amOnPage(['collection/create']);
+        $I->submitForm($this->formId, [
+            'Collection[title]' => $title,
+        ]);
+        $I->see("Title cannot be blank.", ".help-block");
+    }
+
     public function TryToViewACollection(FunctionalTester $I)
     {
+        $collectionId = 1;
+        $collection = Collection::findOne([
+            "user_id" => Yii::$app->user->id,
+            "id" => $collectionId,
+        ]);
         $I->amOnPage(['collection/index']);
-        $collection = $this->getFirstCollecion();
         $viewUrl = "collection/view?id=$collection->id";
         $I->amOnPage([$viewUrl]);
         $I->see($collection->title, 'h1');
+        $I->seeElement('.card-columns');
     }
 
     public function TryToUpdateCollection(FunctionalTester $I)
     {
+        $collectionId = 1;
         $I->amOnPage(['collection/index']);
-        $collection = $this->getFirstCollecion();
+        $collection = Collection::findOne([
+            "user_id" => Yii::$app->user->id,
+            "id" => $collectionId,
+        ]);
 
         $updatedTitle = "changed $collection->title";
         $userId = Yii::$app->user->id;
         $viewUrl = "collection/update?id=$collection->id";
-
         $I->amOnPage([$viewUrl]);
         $I->see("Update Collection: $collection->title", 'h1');
         $I->submitForm($this->formId, [
@@ -157,11 +182,4 @@ class CollectionCest
         // $I->see($updatedTitle, 'h1');
 
     }
-
-    // protected function formParams($login, $password) {
-    //     return [
-    //         'LoginForm[username]' => $login,
-    //         'LoginForm[password]' => $password,
-    //     ];
-    // }
 }
