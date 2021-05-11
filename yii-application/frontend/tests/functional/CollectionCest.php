@@ -125,9 +125,6 @@ class CollectionCest
         //     FirefoxOptions::CAPABILITY,
         //     $options
         // )->setCapability('acceptInsecureCerts', TRUE);
-
-
-
         $collectionId = 1;
         $collectionTitle = "Hobbit";
         $userId = Yii::$app->user->id;
