@@ -5,7 +5,6 @@ namespace frontend\tests\functional;
 use common\fixtures\CollectionFixture;
 use common\fixtures\PhotoFixture;
 use common\fixtures\UserFixture;
-use common\models\LoginForm;
 use common\models\Photo;
 use frontend\tests\FunctionalTester;
 use Yii;

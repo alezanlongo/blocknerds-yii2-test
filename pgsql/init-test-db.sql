@@ -1,0 +1,1 @@
+CREATE DATABASE unsplash_test WITH OWNER = dev ENCODING = 'UTF8'

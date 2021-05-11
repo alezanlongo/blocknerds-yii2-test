@@ -2,17 +2,10 @@
 
 namespace frontend\tests\functional;
 
-use Codeception\Util\ActionSequence;
 use common\fixtures\CollectionFixture;
 use common\fixtures\PhotoFixture;
 use common\fixtures\UserFixture;
 use common\models\Collection;
-use common\models\LoginForm;
-use common\models\User;
-use Facebook\WebDriver\Firefox\FirefoxOptions;
-use Facebook\WebDriver\Remote\DesiredCapabilities;
-use Facebook\WebDriver\Remote\RemoteWebDriver;
-use Facebook\WebDriver\Remote\WebDriverCapabilityType;
 use frontend\tests\FunctionalTester;
 use Yii;
 use yii\helpers\VarDumper;
@@ -55,13 +48,6 @@ class CollectionCest
         $I->submitForm('#login-form', $this->formParams('erau', 'password_0'));
     }
 
-    // private function getFirstCollecion()
-    // {
-    //     return Collection::find()->where([
-    //         "user_id" => Yii::$app->user->id
-    //     ])->limit(1)->one();
-    // }
-
     public function tryToIndexCollection(FunctionalTester $I)
     {
         $I->amOnPage(['collection/index']);
@@ -72,7 +58,6 @@ class CollectionCest
     public function tryToCreateCollection(FunctionalTester $I)
     {
         $title = "Dogs";
-
         $I->amOnPage(['collection/create']);
         $I->submitForm($this->formId, [
             'Collection[title]' => $title,
@@ -100,11 +85,17 @@ class CollectionCest
             "user_id" => Yii::$app->user->id,
             "id" => $collectionId,
         ]);
+        
         $I->amOnPage(['collection/index']);
         $viewUrl = "collection/view?id=$collection->id";
         $I->amOnPage([$viewUrl]);
         $I->see($collection->title, 'h1');
         $I->seeElement('.card-columns');
+        // $I->makeHtmlSnapshot('view_collection');
+      
+        foreach ($collection->getPhotos()->asArray()->all() as $photo) {
+            $I->see($photo['title'], 'h4.card-title');
+        }
     }
 
     public function TryToUpdateCollection(FunctionalTester $I)
@@ -157,7 +148,7 @@ class CollectionCest
 
         $I->amOnPage([$viewUrl]);
         $I->see($collectionTitle, 'h1');
-        $I->click("Delete");
+        // $I->click("Delete");
         // $I->switchToWindow();
 
         // $I->performOn(

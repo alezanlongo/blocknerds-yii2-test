@@ -29,7 +29,11 @@ class FunctionalTester extends \Codeception\Actor
 
     public function dontSeeValidationError($message)
     {
-        // $this->see($message, '.invalid-feedback');
         $this->dontSee($message, '.help-block');
     }
+
+    // public function getWebDriverModule()
+    // {
+    //    return $this->getModule("WebDriver");
+    // }
 }

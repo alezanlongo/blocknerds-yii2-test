@@ -4,3 +4,7 @@ modules:
     enabled:
         - Filesystem
         - Yii2
+        # - WebDriver:
+        #     url: http://selenium-hub:4444/
+        #     browser: chrome
+        #     restart: true
