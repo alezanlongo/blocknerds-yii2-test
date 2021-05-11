@@ -40,7 +40,7 @@ class CollectionController extends Controller
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Collection::find()->where(['user_id'=>Yii::$app->user->id]),
+            'query' => Collection::find()->where(['user_id' => Yii::$app->user->id]),
         ]);
 
         return $this->render('index', [
@@ -75,17 +75,15 @@ class CollectionController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
 
-            // if (!$this->isExistCollection($model->title)) {
-                $now = date_timestamp_get(new DateTime());
+            try {
                 $model->user_id =  Yii::$app->user->id;
-                $model->created_at = $now;
-                $model->updated_at = $now;
                 $model->save();
+                Yii::$app->session->setFlash('success', "Collection created.");
 
                 return $this->redirect(['unsplash/index']);
-            // }
-
-            // Yii::$app->session->setFlash('error', 'Name of collection already exists.');
+            } catch (\Throwable $th) {
+                Yii::$app->session->setFlash('error', "Error creating new collection.");
+            }
         }
 
         return $this->render('create', [
@@ -109,18 +107,6 @@ class CollectionController extends Controller
         ];
     }
 
-    private function isExistCollection(string $title)
-    {
-        $collection = Collection::find()
-            ->where([
-                'title' => $title,
-                'user_id' => Yii::$app->user->id
-            ])
-            ->one();
-
-        return $collection !== null;
-    }
-
     /**
      * Updates an existing Collection model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -133,14 +119,10 @@ class CollectionController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            // if (!$this->isExistCollection($model->title)) {
-                $model->updated_at = date_timestamp_get(new DateTime());
-                $model->save();
+            $model->updated_at = date_timestamp_get(new DateTime());
+            $model->save();
 
-                return $this->redirect(['view', 'id' => $model->id]);
-            // }
-
-            // Yii::$app->session->setFlash('error', 'Name of collection already exists.');
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
@@ -157,9 +139,10 @@ class CollectionController extends Controller
      */
     public function actionDelete($id)
     {
-        $model =$this->findModel($id); 
+        $model = $this->findModel($id);
         // FileController::removeDir(Yii::$app->user->id, $model->id);
         $model->delete();
+        Yii::$app->session->setFlash('success', "Collection deleted.");
 
         return $this->redirect(['index']);
     }

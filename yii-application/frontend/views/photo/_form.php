@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 <div class="photo-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['id'=>'photo-form']); ?>
 
     <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
 

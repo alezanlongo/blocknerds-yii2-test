@@ -28,7 +28,7 @@
         "dersonsena/yii2-jwt-tools": "^1.0"
     },
     "require-dev": {
-        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-debug": "2.1.16",
         "yiisoft/yii2-gii": "~2.1.0",
         "yiisoft/yii2-faker": "~2.0.0",
         "codeception/codeception": "^4.0",
@@ -37,7 +37,9 @@
         "codeception/module-filesystem": "^1.0",
         "codeception/verify": "~0.5.0 || ~1.1.0",
         "symfony/browser-kit": ">=2.7 <=4.2.4",
-        "codeception/module-db": "^1.1"
+        "codeception/module-db": "^1.1",
+        "php-webdriver/webdriver": "^1.1",
+        "codeception/module-webdriver": "^1.2"
     },
     "config": {
         "process-timeout": 1800,

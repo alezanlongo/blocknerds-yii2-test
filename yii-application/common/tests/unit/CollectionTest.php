@@ -17,6 +17,7 @@ class CollectionTest extends \Codeception\Test\Unit
 
     protected function _before()
     {
+
         $this->tester->haveFixtures([
             'user' => [
                 'class' => UserFixture::class,

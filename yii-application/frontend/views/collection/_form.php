@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 <div class="collection-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['id' => 'collection-form']); ?>
 
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
