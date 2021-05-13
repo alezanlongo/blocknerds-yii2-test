@@ -150,7 +150,6 @@ class PhotoController extends Controller
         }
 
         $photo = UnsplashController::searchOne($photoId);
-        $now = date_timestamp_get(new DateTime());
         $transaction = Photo::getDb()->beginTransaction();
 
         try {
@@ -160,8 +159,6 @@ class PhotoController extends Controller
             $newPhoto->url = $photo["urls"]["small"];
             $newPhoto->title = $photo["user"]["name"] ?? "";
             $newPhoto->description = $photo["description"];
-            $newPhoto->created_at = $now;
-            $newPhoto->updated_at = $now;
             $newPhoto->save();
             // handle image file
             $url = $photo["urls"]["small"];

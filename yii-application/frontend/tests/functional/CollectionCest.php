@@ -2,6 +2,7 @@
 
 namespace frontend\tests\functional;
 
+use Codeception\Scenario;
 use common\fixtures\CollectionFixture;
 use common\fixtures\PhotoFixture;
 use common\fixtures\UserFixture;
